@@ -1,0 +1,4364 @@
+[
+  {
+    "id": "1.1.1",
+    "slug": "non-text-content",
+    "title": "Non-text Content",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.1",
+      "title": "Text Alternatives"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Non-text Content.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G111",
+          "title": "Sufficient technique for Non-text Content",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C111",
+          "title": "Advisory technique for Non-text Content",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#non-text-content",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#non-text-content"
+    }
+  },
+  {
+    "id": "1.2.1",
+    "slug": "audio-only-and-video-only-prerecorded",
+    "title": "Audio-only and Video-only (Prerecorded)",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Audio-only and Video-only (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G121",
+          "title": "Sufficient technique for Audio-only and Video-only (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C121",
+          "title": "Advisory technique for Audio-only and Video-only (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#audio-only-and-video-only-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.2",
+    "slug": "captions-prerecorded",
+    "title": "Captions (Prerecorded)",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Captions (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G122",
+          "title": "Sufficient technique for Captions (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C122",
+          "title": "Advisory technique for Captions (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#captions-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#captions-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.3",
+    "slug": "audio-description-or-media-alternative-prerecorded",
+    "title": "Audio Description or Media Alternative (Prerecorded)",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Audio Description or Media Alternative (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G123",
+          "title": "Sufficient technique for Audio Description or Media Alternative (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C123",
+          "title": "Advisory technique for Audio Description or Media Alternative (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#audio-description-or-media-alternative-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.4",
+    "slug": "captions-live",
+    "title": "Captions (Live)",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Captions (Live).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G124",
+          "title": "Sufficient technique for Captions (Live)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C124",
+          "title": "Advisory technique for Captions (Live)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#captions-live",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#captions-live"
+    }
+  },
+  {
+    "id": "1.2.5",
+    "slug": "audio-description-prerecorded",
+    "title": "Audio Description (Prerecorded)",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Audio Description (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G125",
+          "title": "Sufficient technique for Audio Description (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C125",
+          "title": "Advisory technique for Audio Description (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#audio-description-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#audio-description-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.6",
+    "slug": "sign-language-prerecorded",
+    "title": "Sign Language (Prerecorded)",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Sign Language (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G126",
+          "title": "Sufficient technique for Sign Language (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C126",
+          "title": "Advisory technique for Sign Language (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#sign-language-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/sign-language-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#sign-language-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.7",
+    "slug": "extended-audio-description-prerecorded",
+    "title": "Extended Audio Description (Prerecorded)",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Extended Audio Description (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G127",
+          "title": "Sufficient technique for Extended Audio Description (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C127",
+          "title": "Advisory technique for Extended Audio Description (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#extended-audio-description-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/extended-audio-description-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#extended-audio-description-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.8",
+    "slug": "media-alternative-prerecorded",
+    "title": "Media Alternative (Prerecorded)",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Media Alternative (Prerecorded).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G128",
+          "title": "Sufficient technique for Media Alternative (Prerecorded)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C128",
+          "title": "Advisory technique for Media Alternative (Prerecorded)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#media-alternative-prerecorded",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#media-alternative-prerecorded"
+    }
+  },
+  {
+    "id": "1.2.9",
+    "slug": "audio-only-live",
+    "title": "Audio-only (Live)",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.2",
+      "title": "Time-based Media"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Audio-only (Live).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G129",
+          "title": "Sufficient technique for Audio-only (Live)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C129",
+          "title": "Advisory technique for Audio-only (Live)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#audio-only-live",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-live.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#audio-only-live"
+    }
+  },
+  {
+    "id": "1.3.1",
+    "slug": "info-and-relationships",
+    "title": "Info and Relationships",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.3",
+      "title": "Adaptable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Info and Relationships.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G131",
+          "title": "Sufficient technique for Info and Relationships",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C131",
+          "title": "Advisory technique for Info and Relationships",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#info-and-relationships",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships"
+    }
+  },
+  {
+    "id": "1.3.2",
+    "slug": "meaningful-sequence",
+    "title": "Meaningful Sequence",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.3",
+      "title": "Adaptable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Meaningful Sequence.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G132",
+          "title": "Sufficient technique for Meaningful Sequence",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C132",
+          "title": "Advisory technique for Meaningful Sequence",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#meaningful-sequence",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#meaningful-sequence"
+    }
+  },
+  {
+    "id": "1.3.3",
+    "slug": "sensory-characteristics",
+    "title": "Sensory Characteristics",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.3",
+      "title": "Adaptable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Sensory Characteristics.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G133",
+          "title": "Sufficient technique for Sensory Characteristics",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C133",
+          "title": "Advisory technique for Sensory Characteristics",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#sensory-characteristics",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#sensory-characteristics"
+    }
+  },
+  {
+    "id": "1.3.4",
+    "slug": "orientation",
+    "title": "Orientation",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.3",
+      "title": "Adaptable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Orientation.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G134",
+          "title": "Sufficient technique for Orientation",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C134",
+          "title": "Advisory technique for Orientation",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#orientation",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/orientation.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#orientation"
+    }
+  },
+  {
+    "id": "1.3.5",
+    "slug": "identify-input-purpose",
+    "title": "Identify Input Purpose",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.3",
+      "title": "Adaptable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Identify Input Purpose.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G135",
+          "title": "Sufficient technique for Identify Input Purpose",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C135",
+          "title": "Advisory technique for Identify Input Purpose",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#identify-input-purpose",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose"
+    }
+  },
+  {
+    "id": "1.3.6",
+    "slug": "identify-purpose",
+    "title": "Identify Purpose",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.3",
+      "title": "Adaptable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Identify Purpose.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G136",
+          "title": "Sufficient technique for Identify Purpose",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C136",
+          "title": "Advisory technique for Identify Purpose",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#identify-purpose",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/identify-purpose.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#identify-purpose"
+    }
+  },
+  {
+    "id": "1.4.1",
+    "slug": "use-of-color",
+    "title": "Use of Color",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Use of Color.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G141",
+          "title": "Sufficient technique for Use of Color",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C141",
+          "title": "Advisory technique for Use of Color",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#use-of-color",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#use-of-color"
+    }
+  },
+  {
+    "id": "1.4.2",
+    "slug": "audio-control",
+    "title": "Audio Control",
+    "level": "A",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Audio Control.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G142",
+          "title": "Sufficient technique for Audio Control",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C142",
+          "title": "Advisory technique for Audio Control",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#audio-control",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#audio-control"
+    }
+  },
+  {
+    "id": "1.4.3",
+    "slug": "contrast-minimum",
+    "title": "Contrast (Minimum)",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Text and images of text have a contrast ratio of at least 4.5:1, except for large-scale text and incidental or logotype text.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G143",
+          "title": "Sufficient technique for Contrast (Minimum)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C143",
+          "title": "Advisory technique for Contrast (Minimum)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": [
+        {
+          "id": "F24",
+          "title": "Failure due to specifying foreground colors without specifying background colors or vice versa",
+          "technology": "CSS"
+        }
+      ]
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#contrast-minimum",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum"
+    }
+  },
+  {
+    "id": "1.4.4",
+    "slug": "resize-text",
+    "title": "Resize Text",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Resize Text.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G144",
+          "title": "Sufficient technique for Resize Text",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C144",
+          "title": "Advisory technique for Resize Text",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#resize-text",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#resize-text"
+    }
+  },
+  {
+    "id": "1.4.5",
+    "slug": "images-of-text",
+    "title": "Images of Text",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Images of Text.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G145",
+          "title": "Sufficient technique for Images of Text",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C145",
+          "title": "Advisory technique for Images of Text",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#images-of-text",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#images-of-text"
+    }
+  },
+  {
+    "id": "1.4.6",
+    "slug": "contrast-enhanced",
+    "title": "Contrast (Enhanced)",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Text and images of text have a contrast ratio of at least 7:1, except for large-scale text and incidental or logotype text.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G146",
+          "title": "Sufficient technique for Contrast (Enhanced)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C146",
+          "title": "Advisory technique for Contrast (Enhanced)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#contrast-enhanced",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#contrast-enhanced"
+    }
+  },
+  {
+    "id": "1.4.7",
+    "slug": "low-or-no-background-audio",
+    "title": "Low or No Background Audio",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Low or No Background Audio.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G147",
+          "title": "Sufficient technique for Low or No Background Audio",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C147",
+          "title": "Advisory technique for Low or No Background Audio",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#low-or-no-background-audio",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#low-or-no-background-audio"
+    }
+  },
+  {
+    "id": "1.4.8",
+    "slug": "visual-presentation",
+    "title": "Visual Presentation",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "For visual presentation of blocks of text, users can select foreground and background colors; width is no more than 80 characters; text is not justified; line spacing is at least space-and-a-half; and text can be resized without horizontal scrolling.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G148",
+          "title": "Sufficient technique for Visual Presentation",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C148",
+          "title": "Advisory technique for Visual Presentation",
+          "technology": "CSS"
+        }
+      ],
+      "failures": [
+        {
+          "id": "F88",
+          "title": "Failure due to using text that is fully justified",
+          "technology": "CSS"
+        }
+      ]
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#visual-presentation",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#visual-presentation"
+    }
+  },
+  {
+    "id": "1.4.9",
+    "slug": "images-of-text-no-exception",
+    "title": "Images of Text (No Exception)",
+    "level": "AAA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Images of Text (No Exception).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G149",
+          "title": "Sufficient technique for Images of Text (No Exception)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C149",
+          "title": "Advisory technique for Images of Text (No Exception)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#images-of-text-no-exception",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#images-of-text-no-exception"
+    }
+  },
+  {
+    "id": "1.4.10",
+    "slug": "reflow",
+    "title": "Reflow",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Reflow.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G1410",
+          "title": "Sufficient technique for Reflow",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C1410",
+          "title": "Advisory technique for Reflow",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#reflow",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#reflow"
+    }
+  },
+  {
+    "id": "1.4.11",
+    "slug": "non-text-contrast",
+    "title": "Non-text Contrast",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "The visual presentation of user interface components and graphical objects has a contrast ratio of at least 3:1 against adjacent colors.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G1411",
+          "title": "Sufficient technique for Non-text Contrast",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C1411",
+          "title": "Advisory technique for Non-text Contrast",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#non-text-contrast",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast"
+    }
+  },
+  {
+    "id": "1.4.12",
+    "slug": "text-spacing",
+    "title": "Text Spacing",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "No loss of content or functionality occurs when line height, paragraph spacing, letter spacing, and word spacing are overridden to specified values.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G1412",
+          "title": "Sufficient technique for Text Spacing",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C1412",
+          "title": "Advisory technique for Text Spacing",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#text-spacing",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#text-spacing"
+    }
+  },
+  {
+    "id": "1.4.13",
+    "slug": "content-on-hover-or-focus",
+    "title": "Content on Hover or Focus",
+    "level": "AA",
+    "principle": {
+      "id": "1",
+      "title": "Perceivable"
+    },
+    "guideline": {
+      "id": "1.4",
+      "title": "Distinguishable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Content on Hover or Focus.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G1413",
+          "title": "Sufficient technique for Content on Hover or Focus",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C1413",
+          "title": "Advisory technique for Content on Hover or Focus",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#content-on-hover-or-focus"
+    }
+  },
+  {
+    "id": "2.1.1",
+    "slug": "keyboard",
+    "title": "Keyboard",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.1",
+      "title": "Keyboard Accessible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Keyboard.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G211",
+          "title": "Sufficient technique for Keyboard",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C211",
+          "title": "Advisory technique for Keyboard",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#keyboard",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#keyboard"
+    }
+  },
+  {
+    "id": "2.1.2",
+    "slug": "no-keyboard-trap",
+    "title": "No Keyboard Trap",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.1",
+      "title": "Keyboard Accessible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "No Keyboard Trap.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G212",
+          "title": "Sufficient technique for No Keyboard Trap",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C212",
+          "title": "Advisory technique for No Keyboard Trap",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#no-keyboard-trap",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap"
+    }
+  },
+  {
+    "id": "2.1.3",
+    "slug": "keyboard-no-exception",
+    "title": "Keyboard (No Exception)",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.1",
+      "title": "Keyboard Accessible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Keyboard (No Exception).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G213",
+          "title": "Sufficient technique for Keyboard (No Exception)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C213",
+          "title": "Advisory technique for Keyboard (No Exception)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#keyboard-no-exception",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard-no-exception.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#keyboard-no-exception"
+    }
+  },
+  {
+    "id": "2.1.4",
+    "slug": "character-key-shortcuts",
+    "title": "Character Key Shortcuts",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.1",
+      "title": "Keyboard Accessible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Character Key Shortcuts.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G214",
+          "title": "Sufficient technique for Character Key Shortcuts",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C214",
+          "title": "Advisory technique for Character Key Shortcuts",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#character-key-shortcuts",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts"
+    }
+  },
+  {
+    "id": "2.2.1",
+    "slug": "timing-adjustable",
+    "title": "Timing Adjustable",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.2",
+      "title": "Enough Time"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Timing Adjustable.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G221",
+          "title": "Sufficient technique for Timing Adjustable",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C221",
+          "title": "Advisory technique for Timing Adjustable",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#timing-adjustable",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#timing-adjustable"
+    }
+  },
+  {
+    "id": "2.2.2",
+    "slug": "pause-stop-hide",
+    "title": "Pause, Stop, Hide",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.2",
+      "title": "Enough Time"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Pause, Stop, Hide.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G222",
+          "title": "Sufficient technique for Pause, Stop, Hide",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C222",
+          "title": "Advisory technique for Pause, Stop, Hide",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#pause-stop-hide",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide"
+    }
+  },
+  {
+    "id": "2.2.3",
+    "slug": "no-timing",
+    "title": "No Timing",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.2",
+      "title": "Enough Time"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "No Timing.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G223",
+          "title": "Sufficient technique for No Timing",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C223",
+          "title": "Advisory technique for No Timing",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#no-timing",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/no-timing.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#no-timing"
+    }
+  },
+  {
+    "id": "2.2.4",
+    "slug": "interruptions",
+    "title": "Interruptions",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.2",
+      "title": "Enough Time"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Interruptions.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G224",
+          "title": "Sufficient technique for Interruptions",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C224",
+          "title": "Advisory technique for Interruptions",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#interruptions",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/interruptions.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#interruptions"
+    }
+  },
+  {
+    "id": "2.2.5",
+    "slug": "re-authenticating",
+    "title": "Re-authenticating",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.2",
+      "title": "Enough Time"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Re-authenticating.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G225",
+          "title": "Sufficient technique for Re-authenticating",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C225",
+          "title": "Advisory technique for Re-authenticating",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#re-authenticating",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#re-authenticating"
+    }
+  },
+  {
+    "id": "2.2.6",
+    "slug": "timeouts",
+    "title": "Timeouts",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.2",
+      "title": "Enough Time"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Timeouts.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G226",
+          "title": "Sufficient technique for Timeouts",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C226",
+          "title": "Advisory technique for Timeouts",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#timeouts",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/timeouts.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#timeouts"
+    }
+  },
+  {
+    "id": "2.3.1",
+    "slug": "three-flashes-or-below-threshold",
+    "title": "Three Flashes or Below Threshold",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.3",
+      "title": "Seizures and Physical Reactions"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Three Flashes or Below Threshold.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G231",
+          "title": "Sufficient technique for Three Flashes or Below Threshold",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C231",
+          "title": "Advisory technique for Three Flashes or Below Threshold",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#three-flashes-or-below-threshold"
+    }
+  },
+  {
+    "id": "2.3.2",
+    "slug": "three-flashes",
+    "title": "Three Flashes",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.3",
+      "title": "Seizures and Physical Reactions"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Three Flashes.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G232",
+          "title": "Sufficient technique for Three Flashes",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C232",
+          "title": "Advisory technique for Three Flashes",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#three-flashes",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#three-flashes"
+    }
+  },
+  {
+    "id": "2.3.3",
+    "slug": "animation-from-interactions",
+    "title": "Animation from Interactions",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.3",
+      "title": "Seizures and Physical Reactions"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Animation from Interactions.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G233",
+          "title": "Sufficient technique for Animation from Interactions",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C233",
+          "title": "Advisory technique for Animation from Interactions",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#animation-from-interactions",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#animation-from-interactions"
+    }
+  },
+  {
+    "id": "2.4.1",
+    "slug": "bypass-blocks",
+    "title": "Bypass Blocks",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Bypass Blocks.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G241",
+          "title": "Sufficient technique for Bypass Blocks",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C241",
+          "title": "Advisory technique for Bypass Blocks",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#bypass-blocks",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks"
+    }
+  },
+  {
+    "id": "2.4.2",
+    "slug": "page-titled",
+    "title": "Page Titled",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Page Titled.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G242",
+          "title": "Sufficient technique for Page Titled",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C242",
+          "title": "Advisory technique for Page Titled",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#page-titled",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#page-titled"
+    }
+  },
+  {
+    "id": "2.4.3",
+    "slug": "focus-order",
+    "title": "Focus Order",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Focus Order.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G243",
+          "title": "Sufficient technique for Focus Order",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C243",
+          "title": "Advisory technique for Focus Order",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#focus-order",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#focus-order"
+    }
+  },
+  {
+    "id": "2.4.4",
+    "slug": "link-purpose-in-context",
+    "title": "Link Purpose (In Context)",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Link Purpose (In Context).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G244",
+          "title": "Sufficient technique for Link Purpose (In Context)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C244",
+          "title": "Advisory technique for Link Purpose (In Context)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#link-purpose-in-context",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#link-purpose-in-context"
+    }
+  },
+  {
+    "id": "2.4.5",
+    "slug": "multiple-ways",
+    "title": "Multiple Ways",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Multiple Ways.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G245",
+          "title": "Sufficient technique for Multiple Ways",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C245",
+          "title": "Advisory technique for Multiple Ways",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#multiple-ways",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways"
+    }
+  },
+  {
+    "id": "2.4.6",
+    "slug": "headings-and-labels",
+    "title": "Headings and Labels",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Headings and Labels.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G246",
+          "title": "Sufficient technique for Headings and Labels",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C246",
+          "title": "Advisory technique for Headings and Labels",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#headings-and-labels",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#headings-and-labels"
+    }
+  },
+  {
+    "id": "2.4.7",
+    "slug": "focus-visible",
+    "title": "Focus Visible",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G247",
+          "title": "Sufficient technique for Focus Visible",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C247",
+          "title": "Advisory technique for Focus Visible",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#focus-visible",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#focus-visible"
+    }
+  },
+  {
+    "id": "2.4.8",
+    "slug": "location",
+    "title": "Location",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Location.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G248",
+          "title": "Sufficient technique for Location",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C248",
+          "title": "Advisory technique for Location",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#location",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/location.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#location"
+    }
+  },
+  {
+    "id": "2.4.9",
+    "slug": "link-purpose-link-only",
+    "title": "Link Purpose (Link Only)",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Link Purpose (Link Only).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G249",
+          "title": "Sufficient technique for Link Purpose (Link Only)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C249",
+          "title": "Advisory technique for Link Purpose (Link Only)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#link-purpose-link-only",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#link-purpose-link-only"
+    }
+  },
+  {
+    "id": "2.4.10",
+    "slug": "section-headings",
+    "title": "Section Headings",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Section Headings.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G2410",
+          "title": "Sufficient technique for Section Headings",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C2410",
+          "title": "Advisory technique for Section Headings",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#section-headings",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/section-headings.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#section-headings"
+    }
+  },
+  {
+    "id": "2.4.11",
+    "slug": "focus-appearance",
+    "title": "Focus Appearance",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G2411",
+          "title": "Sufficient technique for Focus Appearance",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C2411",
+          "title": "Advisory technique for Focus Appearance",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#focus-appearance",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance"
+    }
+  },
+  {
+    "id": "2.4.12",
+    "slug": "focus-not-obscured-minimum",
+    "title": "Focus Not Obscured (Minimum)",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G2412",
+          "title": "Sufficient technique for Focus Not Obscured (Minimum)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C2412",
+          "title": "Advisory technique for Focus Not Obscured (Minimum)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#focus-not-obscured-minimum"
+    }
+  },
+  {
+    "id": "2.4.13",
+    "slug": "focus-not-obscured-enhanced",
+    "title": "Focus Not Obscured (Enhanced)",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.4",
+      "title": "Navigable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "When a user interface component receives keyboard focus, no part of the focus indicator is hidden by author-created content.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G2413",
+          "title": "Sufficient technique for Focus Not Obscured (Enhanced)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C2413",
+          "title": "Advisory technique for Focus Not Obscured (Enhanced)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-enhanced",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#focus-not-obscured-enhanced"
+    }
+  },
+  {
+    "id": "2.5.1",
+    "slug": "pointer-gestures",
+    "title": "Pointer Gestures",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Pointer Gestures.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G251",
+          "title": "Sufficient technique for Pointer Gestures",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C251",
+          "title": "Advisory technique for Pointer Gestures",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#pointer-gestures",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures"
+    }
+  },
+  {
+    "id": "2.5.2",
+    "slug": "pointer-cancellation",
+    "title": "Pointer Cancellation",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Pointer Cancellation.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G252",
+          "title": "Sufficient technique for Pointer Cancellation",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C252",
+          "title": "Advisory technique for Pointer Cancellation",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#pointer-cancellation",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation"
+    }
+  },
+  {
+    "id": "2.5.3",
+    "slug": "label-in-name",
+    "title": "Label in Name",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Label in Name.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G253",
+          "title": "Sufficient technique for Label in Name",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C253",
+          "title": "Advisory technique for Label in Name",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#label-in-name",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#label-in-name"
+    }
+  },
+  {
+    "id": "2.5.4",
+    "slug": "motion-actuation",
+    "title": "Motion Actuation",
+    "level": "A",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Motion Actuation.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G254",
+          "title": "Sufficient technique for Motion Actuation",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C254",
+          "title": "Advisory technique for Motion Actuation",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#motion-actuation",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#motion-actuation"
+    }
+  },
+  {
+    "id": "2.5.5",
+    "slug": "target-size-enhanced",
+    "title": "Target Size (Enhanced)",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Target Size (Enhanced).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G255",
+          "title": "Sufficient technique for Target Size (Enhanced)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C255",
+          "title": "Advisory technique for Target Size (Enhanced)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#target-size-enhanced",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#target-size-enhanced"
+    }
+  },
+  {
+    "id": "2.5.6",
+    "slug": "concurrent-input-mechanisms",
+    "title": "Concurrent Input Mechanisms",
+    "level": "AAA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Concurrent Input Mechanisms.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G256",
+          "title": "Sufficient technique for Concurrent Input Mechanisms",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C256",
+          "title": "Advisory technique for Concurrent Input Mechanisms",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#concurrent-input-mechanisms",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#concurrent-input-mechanisms"
+    }
+  },
+  {
+    "id": "2.5.7",
+    "slug": "dragging-movements",
+    "title": "Dragging Movements",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Dragging Movements.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G257",
+          "title": "Sufficient technique for Dragging Movements",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C257",
+          "title": "Advisory technique for Dragging Movements",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#dragging-movements",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#dragging-movements"
+    }
+  },
+  {
+    "id": "2.5.8",
+    "slug": "target-size-minimum",
+    "title": "Target Size (Minimum)",
+    "level": "AA",
+    "principle": {
+      "id": "2",
+      "title": "Operable"
+    },
+    "guideline": {
+      "id": "2.5",
+      "title": "Input Modalities"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Target Size (Minimum).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G258",
+          "title": "Sufficient technique for Target Size (Minimum)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C258",
+          "title": "Advisory technique for Target Size (Minimum)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#target-size-minimum",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#target-size-minimum"
+    }
+  },
+  {
+    "id": "3.1.1",
+    "slug": "language-of-page",
+    "title": "Language of Page",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.1",
+      "title": "Readable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Language of Page.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G311",
+          "title": "Sufficient technique for Language of Page",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C311",
+          "title": "Advisory technique for Language of Page",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#language-of-page",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#language-of-page"
+    }
+  },
+  {
+    "id": "3.1.2",
+    "slug": "language-of-parts",
+    "title": "Language of Parts",
+    "level": "AA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.1",
+      "title": "Readable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Language of Parts.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G312",
+          "title": "Sufficient technique for Language of Parts",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C312",
+          "title": "Advisory technique for Language of Parts",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#language-of-parts",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#language-of-parts"
+    }
+  },
+  {
+    "id": "3.1.3",
+    "slug": "unusual-words",
+    "title": "Unusual Words",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.1",
+      "title": "Readable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Unusual Words.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G313",
+          "title": "Sufficient technique for Unusual Words",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C313",
+          "title": "Advisory technique for Unusual Words",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#unusual-words",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/unusual-words.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#unusual-words"
+    }
+  },
+  {
+    "id": "3.1.4",
+    "slug": "abbreviations",
+    "title": "Abbreviations",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.1",
+      "title": "Readable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Abbreviations.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G314",
+          "title": "Sufficient technique for Abbreviations",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C314",
+          "title": "Advisory technique for Abbreviations",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#abbreviations",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#abbreviations"
+    }
+  },
+  {
+    "id": "3.1.5",
+    "slug": "reading-level",
+    "title": "Reading Level",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.1",
+      "title": "Readable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Reading Level.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G315",
+          "title": "Sufficient technique for Reading Level",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C315",
+          "title": "Advisory technique for Reading Level",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#reading-level",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#reading-level"
+    }
+  },
+  {
+    "id": "3.1.6",
+    "slug": "pronunciation",
+    "title": "Pronunciation",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.1",
+      "title": "Readable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Pronunciation.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G316",
+          "title": "Sufficient technique for Pronunciation",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C316",
+          "title": "Advisory technique for Pronunciation",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#pronunciation",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/pronunciation.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#pronunciation"
+    }
+  },
+  {
+    "id": "3.2.1",
+    "slug": "on-focus",
+    "title": "On Focus",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.2",
+      "title": "Predictable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "On Focus.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G321",
+          "title": "Sufficient technique for On Focus",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C321",
+          "title": "Advisory technique for On Focus",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#on-focus",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#on-focus"
+    }
+  },
+  {
+    "id": "3.2.2",
+    "slug": "on-input",
+    "title": "On Input",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.2",
+      "title": "Predictable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "On Input.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G322",
+          "title": "Sufficient technique for On Input",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C322",
+          "title": "Advisory technique for On Input",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#on-input",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/on-input.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#on-input"
+    }
+  },
+  {
+    "id": "3.2.3",
+    "slug": "consistent-navigation",
+    "title": "Consistent Navigation",
+    "level": "AA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.2",
+      "title": "Predictable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Consistent Navigation.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G323",
+          "title": "Sufficient technique for Consistent Navigation",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C323",
+          "title": "Advisory technique for Consistent Navigation",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#consistent-navigation",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#consistent-navigation"
+    }
+  },
+  {
+    "id": "3.2.4",
+    "slug": "consistent-identification",
+    "title": "Consistent Identification",
+    "level": "AA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.2",
+      "title": "Predictable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Consistent Identification.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G324",
+          "title": "Sufficient technique for Consistent Identification",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C324",
+          "title": "Advisory technique for Consistent Identification",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#consistent-identification",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#consistent-identification"
+    }
+  },
+  {
+    "id": "3.2.5",
+    "slug": "change-on-request",
+    "title": "Change on Request",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.2",
+      "title": "Predictable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Change on Request.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G325",
+          "title": "Sufficient technique for Change on Request",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C325",
+          "title": "Advisory technique for Change on Request",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#change-on-request",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/change-on-request.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#change-on-request"
+    }
+  },
+  {
+    "id": "3.2.6",
+    "slug": "consistent-help",
+    "title": "Consistent Help",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.2",
+      "title": "Predictable"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Consistent Help.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G326",
+          "title": "Sufficient technique for Consistent Help",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C326",
+          "title": "Advisory technique for Consistent Help",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#consistent-help",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#consistent-help"
+    }
+  },
+  {
+    "id": "3.3.1",
+    "slug": "error-identification",
+    "title": "Error Identification",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "If an input error is automatically detected, the item in error is identified and the error is described to the user in text.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G331",
+          "title": "Sufficient technique for Error Identification",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C331",
+          "title": "Advisory technique for Error Identification",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#error-identification",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#error-identification"
+    }
+  },
+  {
+    "id": "3.3.2",
+    "slug": "labels-or-instructions",
+    "title": "Labels or Instructions",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Labels or instructions are provided when content requires user input.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G332",
+          "title": "Sufficient technique for Labels or Instructions",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C332",
+          "title": "Advisory technique for Labels or Instructions",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#labels-or-instructions",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions"
+    }
+  },
+  {
+    "id": "3.3.3",
+    "slug": "error-suggestion",
+    "title": "Error Suggestion",
+    "level": "AA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "If an input error is automatically detected and suggestions for correction are known, suggestions are provided unless they jeopardize security or purpose.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G333",
+          "title": "Sufficient technique for Error Suggestion",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C333",
+          "title": "Advisory technique for Error Suggestion",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#error-suggestion",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion"
+    }
+  },
+  {
+    "id": "3.3.4",
+    "slug": "error-prevention-legal-financial-data",
+    "title": "Error Prevention (Legal, Financial, Data)",
+    "level": "AA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "For pages causing legal commitments, financial transactions, data modification or test submissions, submissions are reversible, checked, or confirmed.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G334",
+          "title": "Sufficient technique for Error Prevention (Legal, Financial, Data)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C334",
+          "title": "Advisory technique for Error Prevention (Legal, Financial, Data)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#error-prevention-legal-financial-data"
+    }
+  },
+  {
+    "id": "3.3.5",
+    "slug": "help",
+    "title": "Help",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Help.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G335",
+          "title": "Sufficient technique for Help",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C335",
+          "title": "Advisory technique for Help",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#help",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/help.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#help"
+    }
+  },
+  {
+    "id": "3.3.6",
+    "slug": "error-prevention-all",
+    "title": "Error Prevention (All)",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Error Prevention (All).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G336",
+          "title": "Sufficient technique for Error Prevention (All)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C336",
+          "title": "Advisory technique for Error Prevention (All)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#error-prevention-all",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#error-prevention-all"
+    }
+  },
+  {
+    "id": "3.3.7",
+    "slug": "redundant-entry",
+    "title": "Redundant Entry",
+    "level": "A",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Redundant Entry.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G337",
+          "title": "Sufficient technique for Redundant Entry",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C337",
+          "title": "Advisory technique for Redundant Entry",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#redundant-entry",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#redundant-entry"
+    }
+  },
+  {
+    "id": "3.3.8",
+    "slug": "accessible-authentication-minimum",
+    "title": "Accessible Authentication (Minimum)",
+    "level": "AA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Accessible Authentication (Minimum).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G338",
+          "title": "Sufficient technique for Accessible Authentication (Minimum)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C338",
+          "title": "Advisory technique for Accessible Authentication (Minimum)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#accessible-authentication-minimum"
+    }
+  },
+  {
+    "id": "3.3.9",
+    "slug": "accessible-authentication-enhanced",
+    "title": "Accessible Authentication (Enhanced)",
+    "level": "AAA",
+    "principle": {
+      "id": "3",
+      "title": "Understandable"
+    },
+    "guideline": {
+      "id": "3.3",
+      "title": "Input Assistance"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Accessible Authentication (Enhanced).",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G339",
+          "title": "Sufficient technique for Accessible Authentication (Enhanced)",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C339",
+          "title": "Advisory technique for Accessible Authentication (Enhanced)",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#accessible-authentication-enhanced",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#accessible-authentication-enhanced"
+    }
+  },
+  {
+    "id": "4.1.1",
+    "slug": "parsing",
+    "title": "Parsing",
+    "level": "A",
+    "principle": {
+      "id": "4",
+      "title": "Robust"
+    },
+    "guideline": {
+      "id": "4.1",
+      "title": "Compatible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Parsing.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G411",
+          "title": "Sufficient technique for Parsing",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C411",
+          "title": "Advisory technique for Parsing",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#parsing",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/parsing.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#parsing"
+    }
+  },
+  {
+    "id": "4.1.2",
+    "slug": "name-role-value",
+    "title": "Name, Role, Value",
+    "level": "A",
+    "principle": {
+      "id": "4",
+      "title": "Robust"
+    },
+    "guideline": {
+      "id": "4.1",
+      "title": "Compatible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Name, Role, Value.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G412",
+          "title": "Sufficient technique for Name, Role, Value",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C412",
+          "title": "Advisory technique for Name, Role, Value",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#name-role-value",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#name-role-value"
+    }
+  },
+  {
+    "id": "4.1.3",
+    "slug": "status-messages",
+    "title": "Status Messages",
+    "level": "AA",
+    "principle": {
+      "id": "4",
+      "title": "Robust"
+    },
+    "guideline": {
+      "id": "4.1",
+      "title": "Compatible"
+    },
+    "versions": [
+      "2.0",
+      "2.1",
+      "2.2"
+    ],
+    "normative_text": "Status Messages.",
+    "details": [],
+    "understanding": {
+      "brief": {},
+      "intent": "",
+      "benefits": [],
+      "examples": [],
+      "resources": []
+    },
+    "techniques": {
+      "sufficient": [
+        {
+          "id": "G413",
+          "title": "Sufficient technique for Status Messages",
+          "technology": "General"
+        }
+      ],
+      "advisory": [
+        {
+          "id": "C413",
+          "title": "Advisory technique for Status Messages",
+          "technology": "CSS"
+        }
+      ],
+      "failures": []
+    },
+    "sources": {
+      "spec": "https://www.w3.org/TR/WCAG22/#status-messages",
+      "understanding": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "quickref": "https://www.w3.org/WAI/WCAG22/quickref/#status-messages"
+    }
+  }
+]

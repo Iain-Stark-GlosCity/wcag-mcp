@@ -1,0 +1,2948 @@
+{
+  "principles": [
+    {
+      "id": "perceivable",
+      "num": "1",
+      "handle": "Perceivable",
+      "title": "Perceivable",
+      "versions": [
+        "2.0",
+        "2.1",
+        "2.2"
+      ],
+      "guidelines": [
+        {
+          "id": "text-alternatives",
+          "num": "1.1",
+          "handle": "Text Alternatives",
+          "title": "Text Alternatives",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "non-text-content",
+              "num": "1.1.1",
+              "handle": "Non-text Content",
+              "title": "Non-text Content.",
+              "content": "Non-text Content.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G111",
+                    "title": "Sufficient technique for Non-text Content",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C111",
+                    "title": "Advisory technique for Non-text Content",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "time-based-media",
+          "num": "1.2",
+          "handle": "Time-based Media",
+          "title": "Time-based Media",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "audio-only-and-video-only-prerecorded",
+              "num": "1.2.1",
+              "handle": "Audio-only and Video-only (Prerecorded)",
+              "title": "Audio-only and Video-only (Prerecorded).",
+              "content": "Audio-only and Video-only (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G121",
+                    "title": "Sufficient technique for Audio-only and Video-only (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C121",
+                    "title": "Advisory technique for Audio-only and Video-only (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "captions-prerecorded",
+              "num": "1.2.2",
+              "handle": "Captions (Prerecorded)",
+              "title": "Captions (Prerecorded).",
+              "content": "Captions (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G122",
+                    "title": "Sufficient technique for Captions (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C122",
+                    "title": "Advisory technique for Captions (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "audio-description-or-media-alternative-prerecorded",
+              "num": "1.2.3",
+              "handle": "Audio Description or Media Alternative (Prerecorded)",
+              "title": "Audio Description or Media Alternative (Prerecorded).",
+              "content": "Audio Description or Media Alternative (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G123",
+                    "title": "Sufficient technique for Audio Description or Media Alternative (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C123",
+                    "title": "Advisory technique for Audio Description or Media Alternative (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "captions-live",
+              "num": "1.2.4",
+              "handle": "Captions (Live)",
+              "title": "Captions (Live).",
+              "content": "Captions (Live).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G124",
+                    "title": "Sufficient technique for Captions (Live)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C124",
+                    "title": "Advisory technique for Captions (Live)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "audio-description-prerecorded",
+              "num": "1.2.5",
+              "handle": "Audio Description (Prerecorded)",
+              "title": "Audio Description (Prerecorded).",
+              "content": "Audio Description (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G125",
+                    "title": "Sufficient technique for Audio Description (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C125",
+                    "title": "Advisory technique for Audio Description (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "sign-language-prerecorded",
+              "num": "1.2.6",
+              "handle": "Sign Language (Prerecorded)",
+              "title": "Sign Language (Prerecorded).",
+              "content": "Sign Language (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G126",
+                    "title": "Sufficient technique for Sign Language (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C126",
+                    "title": "Advisory technique for Sign Language (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "extended-audio-description-prerecorded",
+              "num": "1.2.7",
+              "handle": "Extended Audio Description (Prerecorded)",
+              "title": "Extended Audio Description (Prerecorded).",
+              "content": "Extended Audio Description (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G127",
+                    "title": "Sufficient technique for Extended Audio Description (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C127",
+                    "title": "Advisory technique for Extended Audio Description (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "media-alternative-prerecorded",
+              "num": "1.2.8",
+              "handle": "Media Alternative (Prerecorded)",
+              "title": "Media Alternative (Prerecorded).",
+              "content": "Media Alternative (Prerecorded).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G128",
+                    "title": "Sufficient technique for Media Alternative (Prerecorded)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C128",
+                    "title": "Advisory technique for Media Alternative (Prerecorded)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "audio-only-live",
+              "num": "1.2.9",
+              "handle": "Audio-only (Live)",
+              "title": "Audio-only (Live).",
+              "content": "Audio-only (Live).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G129",
+                    "title": "Sufficient technique for Audio-only (Live)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C129",
+                    "title": "Advisory technique for Audio-only (Live)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "adaptable",
+          "num": "1.3",
+          "handle": "Adaptable",
+          "title": "Adaptable",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "info-and-relationships",
+              "num": "1.3.1",
+              "handle": "Info and Relationships",
+              "title": "Info and Relationships.",
+              "content": "Info and Relationships.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G131",
+                    "title": "Sufficient technique for Info and Relationships",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C131",
+                    "title": "Advisory technique for Info and Relationships",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "meaningful-sequence",
+              "num": "1.3.2",
+              "handle": "Meaningful Sequence",
+              "title": "Meaningful Sequence.",
+              "content": "Meaningful Sequence.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G132",
+                    "title": "Sufficient technique for Meaningful Sequence",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C132",
+                    "title": "Advisory technique for Meaningful Sequence",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "sensory-characteristics",
+              "num": "1.3.3",
+              "handle": "Sensory Characteristics",
+              "title": "Sensory Characteristics.",
+              "content": "Sensory Characteristics.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G133",
+                    "title": "Sufficient technique for Sensory Characteristics",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C133",
+                    "title": "Advisory technique for Sensory Characteristics",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "orientation",
+              "num": "1.3.4",
+              "handle": "Orientation",
+              "title": "Orientation.",
+              "content": "Orientation.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G134",
+                    "title": "Sufficient technique for Orientation",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C134",
+                    "title": "Advisory technique for Orientation",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "identify-input-purpose",
+              "num": "1.3.5",
+              "handle": "Identify Input Purpose",
+              "title": "Identify Input Purpose.",
+              "content": "Identify Input Purpose.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G135",
+                    "title": "Sufficient technique for Identify Input Purpose",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C135",
+                    "title": "Advisory technique for Identify Input Purpose",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "identify-purpose",
+              "num": "1.3.6",
+              "handle": "Identify Purpose",
+              "title": "Identify Purpose.",
+              "content": "Identify Purpose.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G136",
+                    "title": "Sufficient technique for Identify Purpose",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C136",
+                    "title": "Advisory technique for Identify Purpose",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "distinguishable",
+          "num": "1.4",
+          "handle": "Distinguishable",
+          "title": "Distinguishable",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "use-of-color",
+              "num": "1.4.1",
+              "handle": "Use of Color",
+              "title": "Use of Color.",
+              "content": "Use of Color.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G141",
+                    "title": "Sufficient technique for Use of Color",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C141",
+                    "title": "Advisory technique for Use of Color",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "audio-control",
+              "num": "1.4.2",
+              "handle": "Audio Control",
+              "title": "Audio Control.",
+              "content": "Audio Control.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G142",
+                    "title": "Sufficient technique for Audio Control",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C142",
+                    "title": "Advisory technique for Audio Control",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "contrast-minimum",
+              "num": "1.4.3",
+              "handle": "Contrast (Minimum)",
+              "title": "Text and images of text have a contrast ratio of at least 4.5:1, except for large-scale text and incidental or logotype text.",
+              "content": "Text and images of text have a contrast ratio of at least 4.5:1, except for large-scale text and incidental or logotype text.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G143",
+                    "title": "Sufficient technique for Contrast (Minimum)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C143",
+                    "title": "Advisory technique for Contrast (Minimum)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": [
+                  {
+                    "id": "F24",
+                    "title": "Failure due to specifying foreground colors without specifying background colors or vice versa",
+                    "technology": "CSS"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "resize-text",
+              "num": "1.4.4",
+              "handle": "Resize Text",
+              "title": "Resize Text.",
+              "content": "Resize Text.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G144",
+                    "title": "Sufficient technique for Resize Text",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C144",
+                    "title": "Advisory technique for Resize Text",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "images-of-text",
+              "num": "1.4.5",
+              "handle": "Images of Text",
+              "title": "Images of Text.",
+              "content": "Images of Text.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G145",
+                    "title": "Sufficient technique for Images of Text",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C145",
+                    "title": "Advisory technique for Images of Text",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "contrast-enhanced",
+              "num": "1.4.6",
+              "handle": "Contrast (Enhanced)",
+              "title": "Text and images of text have a contrast ratio of at least 7:1, except for large-scale text and incidental or logotype text.",
+              "content": "Text and images of text have a contrast ratio of at least 7:1, except for large-scale text and incidental or logotype text.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G146",
+                    "title": "Sufficient technique for Contrast (Enhanced)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C146",
+                    "title": "Advisory technique for Contrast (Enhanced)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "low-or-no-background-audio",
+              "num": "1.4.7",
+              "handle": "Low or No Background Audio",
+              "title": "Low or No Background Audio.",
+              "content": "Low or No Background Audio.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G147",
+                    "title": "Sufficient technique for Low or No Background Audio",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C147",
+                    "title": "Advisory technique for Low or No Background Audio",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "visual-presentation",
+              "num": "1.4.8",
+              "handle": "Visual Presentation",
+              "title": "For visual presentation of blocks of text, users can select foreground and background colors; width is no more than 80 characters; text is not justified; line spacing is at least space-and-a-half; and text can be resized without horizontal scrolling.",
+              "content": "For visual presentation of blocks of text, users can select foreground and background colors; width is no more than 80 characters; text is not justified; line spacing is at least space-and-a-half; and text can be resized without horizontal scrolling.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G148",
+                    "title": "Sufficient technique for Visual Presentation",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C148",
+                    "title": "Advisory technique for Visual Presentation",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": [
+                  {
+                    "id": "F88",
+                    "title": "Failure due to using text that is fully justified",
+                    "technology": "CSS"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "images-of-text-no-exception",
+              "num": "1.4.9",
+              "handle": "Images of Text (No Exception)",
+              "title": "Images of Text (No Exception).",
+              "content": "Images of Text (No Exception).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G149",
+                    "title": "Sufficient technique for Images of Text (No Exception)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C149",
+                    "title": "Advisory technique for Images of Text (No Exception)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "reflow",
+              "num": "1.4.10",
+              "handle": "Reflow",
+              "title": "Reflow.",
+              "content": "Reflow.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G1410",
+                    "title": "Sufficient technique for Reflow",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C1410",
+                    "title": "Advisory technique for Reflow",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "non-text-contrast",
+              "num": "1.4.11",
+              "handle": "Non-text Contrast",
+              "title": "The visual presentation of user interface components and graphical objects has a contrast ratio of at least 3:1 against adjacent colors.",
+              "content": "The visual presentation of user interface components and graphical objects has a contrast ratio of at least 3:1 against adjacent colors.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G1411",
+                    "title": "Sufficient technique for Non-text Contrast",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C1411",
+                    "title": "Advisory technique for Non-text Contrast",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "text-spacing",
+              "num": "1.4.12",
+              "handle": "Text Spacing",
+              "title": "No loss of content or functionality occurs when line height, paragraph spacing, letter spacing, and word spacing are overridden to specified values.",
+              "content": "No loss of content or functionality occurs when line height, paragraph spacing, letter spacing, and word spacing are overridden to specified values.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G1412",
+                    "title": "Sufficient technique for Text Spacing",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C1412",
+                    "title": "Advisory technique for Text Spacing",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "content-on-hover-or-focus",
+              "num": "1.4.13",
+              "handle": "Content on Hover or Focus",
+              "title": "Content on Hover or Focus.",
+              "content": "Content on Hover or Focus.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G1413",
+                    "title": "Sufficient technique for Content on Hover or Focus",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C1413",
+                    "title": "Advisory technique for Content on Hover or Focus",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operable",
+      "num": "2",
+      "handle": "Operable",
+      "title": "Operable",
+      "versions": [
+        "2.0",
+        "2.1",
+        "2.2"
+      ],
+      "guidelines": [
+        {
+          "id": "keyboard-accessible",
+          "num": "2.1",
+          "handle": "Keyboard Accessible",
+          "title": "Keyboard Accessible",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "keyboard",
+              "num": "2.1.1",
+              "handle": "Keyboard",
+              "title": "Keyboard.",
+              "content": "Keyboard.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G211",
+                    "title": "Sufficient technique for Keyboard",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C211",
+                    "title": "Advisory technique for Keyboard",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "no-keyboard-trap",
+              "num": "2.1.2",
+              "handle": "No Keyboard Trap",
+              "title": "No Keyboard Trap.",
+              "content": "No Keyboard Trap.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G212",
+                    "title": "Sufficient technique for No Keyboard Trap",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C212",
+                    "title": "Advisory technique for No Keyboard Trap",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "keyboard-no-exception",
+              "num": "2.1.3",
+              "handle": "Keyboard (No Exception)",
+              "title": "Keyboard (No Exception).",
+              "content": "Keyboard (No Exception).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G213",
+                    "title": "Sufficient technique for Keyboard (No Exception)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C213",
+                    "title": "Advisory technique for Keyboard (No Exception)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "character-key-shortcuts",
+              "num": "2.1.4",
+              "handle": "Character Key Shortcuts",
+              "title": "Character Key Shortcuts.",
+              "content": "Character Key Shortcuts.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G214",
+                    "title": "Sufficient technique for Character Key Shortcuts",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C214",
+                    "title": "Advisory technique for Character Key Shortcuts",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "enough-time",
+          "num": "2.2",
+          "handle": "Enough Time",
+          "title": "Enough Time",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "timing-adjustable",
+              "num": "2.2.1",
+              "handle": "Timing Adjustable",
+              "title": "Timing Adjustable.",
+              "content": "Timing Adjustable.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G221",
+                    "title": "Sufficient technique for Timing Adjustable",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C221",
+                    "title": "Advisory technique for Timing Adjustable",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "pause-stop-hide",
+              "num": "2.2.2",
+              "handle": "Pause, Stop, Hide",
+              "title": "Pause, Stop, Hide.",
+              "content": "Pause, Stop, Hide.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G222",
+                    "title": "Sufficient technique for Pause, Stop, Hide",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C222",
+                    "title": "Advisory technique for Pause, Stop, Hide",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "no-timing",
+              "num": "2.2.3",
+              "handle": "No Timing",
+              "title": "No Timing.",
+              "content": "No Timing.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G223",
+                    "title": "Sufficient technique for No Timing",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C223",
+                    "title": "Advisory technique for No Timing",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "interruptions",
+              "num": "2.2.4",
+              "handle": "Interruptions",
+              "title": "Interruptions.",
+              "content": "Interruptions.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G224",
+                    "title": "Sufficient technique for Interruptions",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C224",
+                    "title": "Advisory technique for Interruptions",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "re-authenticating",
+              "num": "2.2.5",
+              "handle": "Re-authenticating",
+              "title": "Re-authenticating.",
+              "content": "Re-authenticating.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G225",
+                    "title": "Sufficient technique for Re-authenticating",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C225",
+                    "title": "Advisory technique for Re-authenticating",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "timeouts",
+              "num": "2.2.6",
+              "handle": "Timeouts",
+              "title": "Timeouts.",
+              "content": "Timeouts.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G226",
+                    "title": "Sufficient technique for Timeouts",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C226",
+                    "title": "Advisory technique for Timeouts",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "seizures-and-physical-reactions",
+          "num": "2.3",
+          "handle": "Seizures and Physical Reactions",
+          "title": "Seizures and Physical Reactions",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "three-flashes-or-below-threshold",
+              "num": "2.3.1",
+              "handle": "Three Flashes or Below Threshold",
+              "title": "Three Flashes or Below Threshold.",
+              "content": "Three Flashes or Below Threshold.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G231",
+                    "title": "Sufficient technique for Three Flashes or Below Threshold",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C231",
+                    "title": "Advisory technique for Three Flashes or Below Threshold",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "three-flashes",
+              "num": "2.3.2",
+              "handle": "Three Flashes",
+              "title": "Three Flashes.",
+              "content": "Three Flashes.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G232",
+                    "title": "Sufficient technique for Three Flashes",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C232",
+                    "title": "Advisory technique for Three Flashes",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "animation-from-interactions",
+              "num": "2.3.3",
+              "handle": "Animation from Interactions",
+              "title": "Animation from Interactions.",
+              "content": "Animation from Interactions.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G233",
+                    "title": "Sufficient technique for Animation from Interactions",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C233",
+                    "title": "Advisory technique for Animation from Interactions",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "navigable",
+          "num": "2.4",
+          "handle": "Navigable",
+          "title": "Navigable",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "bypass-blocks",
+              "num": "2.4.1",
+              "handle": "Bypass Blocks",
+              "title": "Bypass Blocks.",
+              "content": "Bypass Blocks.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G241",
+                    "title": "Sufficient technique for Bypass Blocks",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C241",
+                    "title": "Advisory technique for Bypass Blocks",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "page-titled",
+              "num": "2.4.2",
+              "handle": "Page Titled",
+              "title": "Page Titled.",
+              "content": "Page Titled.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G242",
+                    "title": "Sufficient technique for Page Titled",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C242",
+                    "title": "Advisory technique for Page Titled",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "focus-order",
+              "num": "2.4.3",
+              "handle": "Focus Order",
+              "title": "Focus Order.",
+              "content": "Focus Order.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G243",
+                    "title": "Sufficient technique for Focus Order",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C243",
+                    "title": "Advisory technique for Focus Order",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "link-purpose-in-context",
+              "num": "2.4.4",
+              "handle": "Link Purpose (In Context)",
+              "title": "Link Purpose (In Context).",
+              "content": "Link Purpose (In Context).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G244",
+                    "title": "Sufficient technique for Link Purpose (In Context)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C244",
+                    "title": "Advisory technique for Link Purpose (In Context)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "multiple-ways",
+              "num": "2.4.5",
+              "handle": "Multiple Ways",
+              "title": "Multiple Ways.",
+              "content": "Multiple Ways.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G245",
+                    "title": "Sufficient technique for Multiple Ways",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C245",
+                    "title": "Advisory technique for Multiple Ways",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "headings-and-labels",
+              "num": "2.4.6",
+              "handle": "Headings and Labels",
+              "title": "Headings and Labels.",
+              "content": "Headings and Labels.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G246",
+                    "title": "Sufficient technique for Headings and Labels",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C246",
+                    "title": "Advisory technique for Headings and Labels",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "focus-visible",
+              "num": "2.4.7",
+              "handle": "Focus Visible",
+              "title": "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
+              "content": "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G247",
+                    "title": "Sufficient technique for Focus Visible",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C247",
+                    "title": "Advisory technique for Focus Visible",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "location",
+              "num": "2.4.8",
+              "handle": "Location",
+              "title": "Location.",
+              "content": "Location.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G248",
+                    "title": "Sufficient technique for Location",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C248",
+                    "title": "Advisory technique for Location",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "link-purpose-link-only",
+              "num": "2.4.9",
+              "handle": "Link Purpose (Link Only)",
+              "title": "Link Purpose (Link Only).",
+              "content": "Link Purpose (Link Only).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G249",
+                    "title": "Sufficient technique for Link Purpose (Link Only)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C249",
+                    "title": "Advisory technique for Link Purpose (Link Only)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "section-headings",
+              "num": "2.4.10",
+              "handle": "Section Headings",
+              "title": "Section Headings.",
+              "content": "Section Headings.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G2410",
+                    "title": "Sufficient technique for Section Headings",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C2410",
+                    "title": "Advisory technique for Section Headings",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "focus-appearance",
+              "num": "2.4.11",
+              "handle": "Focus Appearance",
+              "title": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
+              "content": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G2411",
+                    "title": "Sufficient technique for Focus Appearance",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C2411",
+                    "title": "Advisory technique for Focus Appearance",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "focus-not-obscured-minimum",
+              "num": "2.4.12",
+              "handle": "Focus Not Obscured (Minimum)",
+              "title": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
+              "content": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G2412",
+                    "title": "Sufficient technique for Focus Not Obscured (Minimum)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C2412",
+                    "title": "Advisory technique for Focus Not Obscured (Minimum)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "focus-not-obscured-enhanced",
+              "num": "2.4.13",
+              "handle": "Focus Not Obscured (Enhanced)",
+              "title": "When a user interface component receives keyboard focus, no part of the focus indicator is hidden by author-created content.",
+              "content": "When a user interface component receives keyboard focus, no part of the focus indicator is hidden by author-created content.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G2413",
+                    "title": "Sufficient technique for Focus Not Obscured (Enhanced)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C2413",
+                    "title": "Advisory technique for Focus Not Obscured (Enhanced)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "input-modalities",
+          "num": "2.5",
+          "handle": "Input Modalities",
+          "title": "Input Modalities",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "pointer-gestures",
+              "num": "2.5.1",
+              "handle": "Pointer Gestures",
+              "title": "Pointer Gestures.",
+              "content": "Pointer Gestures.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G251",
+                    "title": "Sufficient technique for Pointer Gestures",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C251",
+                    "title": "Advisory technique for Pointer Gestures",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "pointer-cancellation",
+              "num": "2.5.2",
+              "handle": "Pointer Cancellation",
+              "title": "Pointer Cancellation.",
+              "content": "Pointer Cancellation.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G252",
+                    "title": "Sufficient technique for Pointer Cancellation",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C252",
+                    "title": "Advisory technique for Pointer Cancellation",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "label-in-name",
+              "num": "2.5.3",
+              "handle": "Label in Name",
+              "title": "Label in Name.",
+              "content": "Label in Name.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G253",
+                    "title": "Sufficient technique for Label in Name",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C253",
+                    "title": "Advisory technique for Label in Name",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "motion-actuation",
+              "num": "2.5.4",
+              "handle": "Motion Actuation",
+              "title": "Motion Actuation.",
+              "content": "Motion Actuation.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G254",
+                    "title": "Sufficient technique for Motion Actuation",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C254",
+                    "title": "Advisory technique for Motion Actuation",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "target-size-enhanced",
+              "num": "2.5.5",
+              "handle": "Target Size (Enhanced)",
+              "title": "Target Size (Enhanced).",
+              "content": "Target Size (Enhanced).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G255",
+                    "title": "Sufficient technique for Target Size (Enhanced)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C255",
+                    "title": "Advisory technique for Target Size (Enhanced)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "concurrent-input-mechanisms",
+              "num": "2.5.6",
+              "handle": "Concurrent Input Mechanisms",
+              "title": "Concurrent Input Mechanisms.",
+              "content": "Concurrent Input Mechanisms.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G256",
+                    "title": "Sufficient technique for Concurrent Input Mechanisms",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C256",
+                    "title": "Advisory technique for Concurrent Input Mechanisms",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "dragging-movements",
+              "num": "2.5.7",
+              "handle": "Dragging Movements",
+              "title": "Dragging Movements.",
+              "content": "Dragging Movements.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G257",
+                    "title": "Sufficient technique for Dragging Movements",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C257",
+                    "title": "Advisory technique for Dragging Movements",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "target-size-minimum",
+              "num": "2.5.8",
+              "handle": "Target Size (Minimum)",
+              "title": "Target Size (Minimum).",
+              "content": "Target Size (Minimum).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G258",
+                    "title": "Sufficient technique for Target Size (Minimum)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C258",
+                    "title": "Advisory technique for Target Size (Minimum)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "understandable",
+      "num": "3",
+      "handle": "Understandable",
+      "title": "Understandable",
+      "versions": [
+        "2.0",
+        "2.1",
+        "2.2"
+      ],
+      "guidelines": [
+        {
+          "id": "readable",
+          "num": "3.1",
+          "handle": "Readable",
+          "title": "Readable",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "language-of-page",
+              "num": "3.1.1",
+              "handle": "Language of Page",
+              "title": "Language of Page.",
+              "content": "Language of Page.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G311",
+                    "title": "Sufficient technique for Language of Page",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C311",
+                    "title": "Advisory technique for Language of Page",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "language-of-parts",
+              "num": "3.1.2",
+              "handle": "Language of Parts",
+              "title": "Language of Parts.",
+              "content": "Language of Parts.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G312",
+                    "title": "Sufficient technique for Language of Parts",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C312",
+                    "title": "Advisory technique for Language of Parts",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "unusual-words",
+              "num": "3.1.3",
+              "handle": "Unusual Words",
+              "title": "Unusual Words.",
+              "content": "Unusual Words.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G313",
+                    "title": "Sufficient technique for Unusual Words",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C313",
+                    "title": "Advisory technique for Unusual Words",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "abbreviations",
+              "num": "3.1.4",
+              "handle": "Abbreviations",
+              "title": "Abbreviations.",
+              "content": "Abbreviations.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G314",
+                    "title": "Sufficient technique for Abbreviations",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C314",
+                    "title": "Advisory technique for Abbreviations",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "reading-level",
+              "num": "3.1.5",
+              "handle": "Reading Level",
+              "title": "Reading Level.",
+              "content": "Reading Level.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G315",
+                    "title": "Sufficient technique for Reading Level",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C315",
+                    "title": "Advisory technique for Reading Level",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "pronunciation",
+              "num": "3.1.6",
+              "handle": "Pronunciation",
+              "title": "Pronunciation.",
+              "content": "Pronunciation.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G316",
+                    "title": "Sufficient technique for Pronunciation",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C316",
+                    "title": "Advisory technique for Pronunciation",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "predictable",
+          "num": "3.2",
+          "handle": "Predictable",
+          "title": "Predictable",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "on-focus",
+              "num": "3.2.1",
+              "handle": "On Focus",
+              "title": "On Focus.",
+              "content": "On Focus.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G321",
+                    "title": "Sufficient technique for On Focus",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C321",
+                    "title": "Advisory technique for On Focus",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "on-input",
+              "num": "3.2.2",
+              "handle": "On Input",
+              "title": "On Input.",
+              "content": "On Input.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G322",
+                    "title": "Sufficient technique for On Input",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C322",
+                    "title": "Advisory technique for On Input",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "consistent-navigation",
+              "num": "3.2.3",
+              "handle": "Consistent Navigation",
+              "title": "Consistent Navigation.",
+              "content": "Consistent Navigation.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G323",
+                    "title": "Sufficient technique for Consistent Navigation",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C323",
+                    "title": "Advisory technique for Consistent Navigation",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "consistent-identification",
+              "num": "3.2.4",
+              "handle": "Consistent Identification",
+              "title": "Consistent Identification.",
+              "content": "Consistent Identification.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G324",
+                    "title": "Sufficient technique for Consistent Identification",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C324",
+                    "title": "Advisory technique for Consistent Identification",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "change-on-request",
+              "num": "3.2.5",
+              "handle": "Change on Request",
+              "title": "Change on Request.",
+              "content": "Change on Request.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G325",
+                    "title": "Sufficient technique for Change on Request",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C325",
+                    "title": "Advisory technique for Change on Request",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "consistent-help",
+              "num": "3.2.6",
+              "handle": "Consistent Help",
+              "title": "Consistent Help.",
+              "content": "Consistent Help.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G326",
+                    "title": "Sufficient technique for Consistent Help",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C326",
+                    "title": "Advisory technique for Consistent Help",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "input-assistance",
+          "num": "3.3",
+          "handle": "Input Assistance",
+          "title": "Input Assistance",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "error-identification",
+              "num": "3.3.1",
+              "handle": "Error Identification",
+              "title": "If an input error is automatically detected, the item in error is identified and the error is described to the user in text.",
+              "content": "If an input error is automatically detected, the item in error is identified and the error is described to the user in text.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G331",
+                    "title": "Sufficient technique for Error Identification",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C331",
+                    "title": "Advisory technique for Error Identification",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "labels-or-instructions",
+              "num": "3.3.2",
+              "handle": "Labels or Instructions",
+              "title": "Labels or instructions are provided when content requires user input.",
+              "content": "Labels or instructions are provided when content requires user input.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G332",
+                    "title": "Sufficient technique for Labels or Instructions",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C332",
+                    "title": "Advisory technique for Labels or Instructions",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "error-suggestion",
+              "num": "3.3.3",
+              "handle": "Error Suggestion",
+              "title": "If an input error is automatically detected and suggestions for correction are known, suggestions are provided unless they jeopardize security or purpose.",
+              "content": "If an input error is automatically detected and suggestions for correction are known, suggestions are provided unless they jeopardize security or purpose.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G333",
+                    "title": "Sufficient technique for Error Suggestion",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C333",
+                    "title": "Advisory technique for Error Suggestion",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "error-prevention-legal-financial-data",
+              "num": "3.3.4",
+              "handle": "Error Prevention (Legal, Financial, Data)",
+              "title": "For pages causing legal commitments, financial transactions, data modification or test submissions, submissions are reversible, checked, or confirmed.",
+              "content": "For pages causing legal commitments, financial transactions, data modification or test submissions, submissions are reversible, checked, or confirmed.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G334",
+                    "title": "Sufficient technique for Error Prevention (Legal, Financial, Data)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C334",
+                    "title": "Advisory technique for Error Prevention (Legal, Financial, Data)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "help",
+              "num": "3.3.5",
+              "handle": "Help",
+              "title": "Help.",
+              "content": "Help.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G335",
+                    "title": "Sufficient technique for Help",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C335",
+                    "title": "Advisory technique for Help",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "error-prevention-all",
+              "num": "3.3.6",
+              "handle": "Error Prevention (All)",
+              "title": "Error Prevention (All).",
+              "content": "Error Prevention (All).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G336",
+                    "title": "Sufficient technique for Error Prevention (All)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C336",
+                    "title": "Advisory technique for Error Prevention (All)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "redundant-entry",
+              "num": "3.3.7",
+              "handle": "Redundant Entry",
+              "title": "Redundant Entry.",
+              "content": "Redundant Entry.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G337",
+                    "title": "Sufficient technique for Redundant Entry",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C337",
+                    "title": "Advisory technique for Redundant Entry",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "accessible-authentication-minimum",
+              "num": "3.3.8",
+              "handle": "Accessible Authentication (Minimum)",
+              "title": "Accessible Authentication (Minimum).",
+              "content": "Accessible Authentication (Minimum).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G338",
+                    "title": "Sufficient technique for Accessible Authentication (Minimum)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C338",
+                    "title": "Advisory technique for Accessible Authentication (Minimum)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "accessible-authentication-enhanced",
+              "num": "3.3.9",
+              "handle": "Accessible Authentication (Enhanced)",
+              "title": "Accessible Authentication (Enhanced).",
+              "content": "Accessible Authentication (Enhanced).",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AAA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G339",
+                    "title": "Sufficient technique for Accessible Authentication (Enhanced)",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C339",
+                    "title": "Advisory technique for Accessible Authentication (Enhanced)",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robust",
+      "num": "4",
+      "handle": "Robust",
+      "title": "Robust",
+      "versions": [
+        "2.0",
+        "2.1",
+        "2.2"
+      ],
+      "guidelines": [
+        {
+          "id": "compatible",
+          "num": "4.1",
+          "handle": "Compatible",
+          "title": "Compatible",
+          "versions": [
+            "2.0",
+            "2.1",
+            "2.2"
+          ],
+          "successcriteria": [
+            {
+              "id": "parsing",
+              "num": "4.1.1",
+              "handle": "Parsing",
+              "title": "Parsing.",
+              "content": "Parsing.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G411",
+                    "title": "Sufficient technique for Parsing",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C411",
+                    "title": "Advisory technique for Parsing",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "name-role-value",
+              "num": "4.1.2",
+              "handle": "Name, Role, Value",
+              "title": "Name, Role, Value.",
+              "content": "Name, Role, Value.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "A",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G412",
+                    "title": "Sufficient technique for Name, Role, Value",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C412",
+                    "title": "Advisory technique for Name, Role, Value",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            },
+            {
+              "id": "status-messages",
+              "num": "4.1.3",
+              "handle": "Status Messages",
+              "title": "Status Messages.",
+              "content": "Status Messages.",
+              "versions": [
+                "2.0",
+                "2.1",
+                "2.2"
+              ],
+              "level": "AA",
+              "details": [],
+              "techniques": {
+                "sufficient": [
+                  {
+                    "id": "G413",
+                    "title": "Sufficient technique for Status Messages",
+                    "technology": "General"
+                  }
+                ],
+                "advisory": [
+                  {
+                    "id": "C413",
+                    "title": "Advisory technique for Status Messages",
+                    "technology": "CSS"
+                  }
+                ],
+                "failures": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "programmatically determined",
+      "definition": "Determined by software from author-supplied data provided in a way that different user agents can extract and present to users."
+    },
+    {
+      "term": "name",
+      "definition": "Text by which software can identify a component within Web content to the user."
+    },
+    {
+      "term": "contrast ratio",
+      "definition": "A measure of the difference in perceived luminance between two colors."
+    }
+  ]
+}

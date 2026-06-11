@@ -1,17 +1,19 @@
 {
-  "name": "wcag-guidelines-mcp",
-  "version": "2.0.0",
-  "mcpName": "io.github.joe-watkins/wcag-guidelines",
-  "description": "WCAG MCP server for agentic systems - powered by official W3C data",
+  "name": "accessibility-advisor-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.accessibility-advisor/accessibility-advisor-mcp",
+  "description": "Cloud-hosted Accessibility Advisor MCP with structured WCAG-backed build guidance",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "wcag-guidelines-mcp": "src/index.js"
+    "accessibility-advisor-mcp": "src/index.js"
   },
   "files": [
     "src/",
     "data/wcag.json",
-    "README.md"
+    "data/normalised/",
+    "README.md",
+    "ATTRIBUTION.md"
   ],
   "keywords": [
     "mcp",
@@ -25,22 +27,25 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joe-watkins/wcag-mcp.git"
+    "url": "git+https://github.com/accessibility-advisor/accessibility-advisor-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/joe-watkins/wcag-mcp/issues"
+    "url": "https://github.com/accessibility-advisor/accessibility-advisor-mcp/issues"
   },
-  "homepage": "https://github.com/joe-watkins/wcag-mcp#readme",
+  "homepage": "https://github.com/accessibility-advisor/accessibility-advisor-mcp#readme",
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.4",
     "jsdom": "^25.0.1"
   },
   "scripts": {
     "start": "node src/index.js",
     "dev": "node src/index.js",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "normalise": "node scripts/normalise-wcag.js && node scripts/build-topic-index.js && node scripts/build-component-rules.js",
+    "validate:data": "node scripts/validate-data.js",
+    "test": "node --test \"test/**/*.test.js\"",
+    "test:golden": "node --test test/golden/*.test.js"
   }
 }

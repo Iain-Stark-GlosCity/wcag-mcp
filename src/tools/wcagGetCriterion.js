@@ -1,0 +1,3 @@
+import { findCriterion } from '../services/wcagStore.js';
+import { withSourceMetadata } from '../services/sourceBuilder.js';
+export const wcag_get_criterion = { name:'wcag_get_criterion', description:'Get a structured WCAG criterion by reference or slug.', inputSchema:{ type:'object', properties:{ ref_id:{type:'string'}, include:{type:'array', items:{type:'string'}} }, required:['ref_id'] }, async handler(args){ const criterion=findCriterion(args.ref_id); if(!criterion){ const e=new Error(`No WCAG criterion found for ref_id ${args.ref_id}.`); e.code='CRITERION_NOT_FOUND'; e.hint='Use a WCAG reference such as 1.4.8.'; throw e;} return withSourceMetadata({ criterion }, { tool:'wcag_get_criterion', criteria_used:[criterion.id] }); }};

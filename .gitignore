@@ -1,8 +1,7 @@
 # Dependencies
 node_modules/
 
-# Generated data files (rebuilt with npm run build:data)
-data/wcag.json
+# Local/generated data scratch files
 data/act-rules.json
 
 # OS files
