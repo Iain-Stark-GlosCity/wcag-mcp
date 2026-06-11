@@ -1,0 +1,1234 @@
+[
+  {
+    "id": "G111",
+    "title": "Sufficient technique for Non-text Content",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.1.1"
+  },
+  {
+    "id": "C111",
+    "title": "Advisory technique for Non-text Content",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.1.1"
+  },
+  {
+    "id": "G121",
+    "title": "Sufficient technique for Audio-only and Video-only (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.1"
+  },
+  {
+    "id": "C121",
+    "title": "Advisory technique for Audio-only and Video-only (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.1"
+  },
+  {
+    "id": "G122",
+    "title": "Sufficient technique for Captions (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.2"
+  },
+  {
+    "id": "C122",
+    "title": "Advisory technique for Captions (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.2"
+  },
+  {
+    "id": "G123",
+    "title": "Sufficient technique for Audio Description or Media Alternative (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.3"
+  },
+  {
+    "id": "C123",
+    "title": "Advisory technique for Audio Description or Media Alternative (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.3"
+  },
+  {
+    "id": "G124",
+    "title": "Sufficient technique for Captions (Live)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.4"
+  },
+  {
+    "id": "C124",
+    "title": "Advisory technique for Captions (Live)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.4"
+  },
+  {
+    "id": "G125",
+    "title": "Sufficient technique for Audio Description (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.5"
+  },
+  {
+    "id": "C125",
+    "title": "Advisory technique for Audio Description (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.5"
+  },
+  {
+    "id": "G126",
+    "title": "Sufficient technique for Sign Language (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.6"
+  },
+  {
+    "id": "C126",
+    "title": "Advisory technique for Sign Language (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.6"
+  },
+  {
+    "id": "G127",
+    "title": "Sufficient technique for Extended Audio Description (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.7"
+  },
+  {
+    "id": "C127",
+    "title": "Advisory technique for Extended Audio Description (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.7"
+  },
+  {
+    "id": "G128",
+    "title": "Sufficient technique for Media Alternative (Prerecorded)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.8"
+  },
+  {
+    "id": "C128",
+    "title": "Advisory technique for Media Alternative (Prerecorded)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.8"
+  },
+  {
+    "id": "G129",
+    "title": "Sufficient technique for Audio-only (Live)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.2.9"
+  },
+  {
+    "id": "C129",
+    "title": "Advisory technique for Audio-only (Live)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.2.9"
+  },
+  {
+    "id": "G131",
+    "title": "Sufficient technique for Info and Relationships",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.3.1"
+  },
+  {
+    "id": "C131",
+    "title": "Advisory technique for Info and Relationships",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.3.1"
+  },
+  {
+    "id": "G132",
+    "title": "Sufficient technique for Meaningful Sequence",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.3.2"
+  },
+  {
+    "id": "C132",
+    "title": "Advisory technique for Meaningful Sequence",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.3.2"
+  },
+  {
+    "id": "G133",
+    "title": "Sufficient technique for Sensory Characteristics",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.3.3"
+  },
+  {
+    "id": "C133",
+    "title": "Advisory technique for Sensory Characteristics",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.3.3"
+  },
+  {
+    "id": "G134",
+    "title": "Sufficient technique for Orientation",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.3.4"
+  },
+  {
+    "id": "C134",
+    "title": "Advisory technique for Orientation",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.3.4"
+  },
+  {
+    "id": "G135",
+    "title": "Sufficient technique for Identify Input Purpose",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.3.5"
+  },
+  {
+    "id": "C135",
+    "title": "Advisory technique for Identify Input Purpose",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.3.5"
+  },
+  {
+    "id": "G136",
+    "title": "Sufficient technique for Identify Purpose",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.3.6"
+  },
+  {
+    "id": "C136",
+    "title": "Advisory technique for Identify Purpose",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.3.6"
+  },
+  {
+    "id": "G141",
+    "title": "Sufficient technique for Use of Color",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.1"
+  },
+  {
+    "id": "C141",
+    "title": "Advisory technique for Use of Color",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.1"
+  },
+  {
+    "id": "G142",
+    "title": "Sufficient technique for Audio Control",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.2"
+  },
+  {
+    "id": "C142",
+    "title": "Advisory technique for Audio Control",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.2"
+  },
+  {
+    "id": "G143",
+    "title": "Sufficient technique for Contrast (Minimum)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.3"
+  },
+  {
+    "id": "C143",
+    "title": "Advisory technique for Contrast (Minimum)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.3"
+  },
+  {
+    "id": "F24",
+    "title": "Failure due to specifying foreground colors without specifying background colors or vice versa",
+    "technology": "CSS",
+    "type": "failures",
+    "criterion": "1.4.3"
+  },
+  {
+    "id": "G144",
+    "title": "Sufficient technique for Resize Text",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.4"
+  },
+  {
+    "id": "C144",
+    "title": "Advisory technique for Resize Text",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.4"
+  },
+  {
+    "id": "G145",
+    "title": "Sufficient technique for Images of Text",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.5"
+  },
+  {
+    "id": "C145",
+    "title": "Advisory technique for Images of Text",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.5"
+  },
+  {
+    "id": "G146",
+    "title": "Sufficient technique for Contrast (Enhanced)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.6"
+  },
+  {
+    "id": "C146",
+    "title": "Advisory technique for Contrast (Enhanced)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.6"
+  },
+  {
+    "id": "G147",
+    "title": "Sufficient technique for Low or No Background Audio",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.7"
+  },
+  {
+    "id": "C147",
+    "title": "Advisory technique for Low or No Background Audio",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.7"
+  },
+  {
+    "id": "G148",
+    "title": "Sufficient technique for Visual Presentation",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.8"
+  },
+  {
+    "id": "C148",
+    "title": "Advisory technique for Visual Presentation",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.8"
+  },
+  {
+    "id": "F88",
+    "title": "Failure due to using text that is fully justified",
+    "technology": "CSS",
+    "type": "failures",
+    "criterion": "1.4.8"
+  },
+  {
+    "id": "G149",
+    "title": "Sufficient technique for Images of Text (No Exception)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.9"
+  },
+  {
+    "id": "C149",
+    "title": "Advisory technique for Images of Text (No Exception)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.9"
+  },
+  {
+    "id": "G1410",
+    "title": "Sufficient technique for Reflow",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.10"
+  },
+  {
+    "id": "C1410",
+    "title": "Advisory technique for Reflow",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.10"
+  },
+  {
+    "id": "G1411",
+    "title": "Sufficient technique for Non-text Contrast",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.11"
+  },
+  {
+    "id": "C1411",
+    "title": "Advisory technique for Non-text Contrast",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.11"
+  },
+  {
+    "id": "G1412",
+    "title": "Sufficient technique for Text Spacing",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.12"
+  },
+  {
+    "id": "C1412",
+    "title": "Advisory technique for Text Spacing",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.12"
+  },
+  {
+    "id": "G1413",
+    "title": "Sufficient technique for Content on Hover or Focus",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "1.4.13"
+  },
+  {
+    "id": "C1413",
+    "title": "Advisory technique for Content on Hover or Focus",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "1.4.13"
+  },
+  {
+    "id": "G211",
+    "title": "Sufficient technique for Keyboard",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.1.1"
+  },
+  {
+    "id": "C211",
+    "title": "Advisory technique for Keyboard",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.1.1"
+  },
+  {
+    "id": "G212",
+    "title": "Sufficient technique for No Keyboard Trap",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.1.2"
+  },
+  {
+    "id": "C212",
+    "title": "Advisory technique for No Keyboard Trap",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.1.2"
+  },
+  {
+    "id": "G213",
+    "title": "Sufficient technique for Keyboard (No Exception)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.1.3"
+  },
+  {
+    "id": "C213",
+    "title": "Advisory technique for Keyboard (No Exception)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.1.3"
+  },
+  {
+    "id": "G214",
+    "title": "Sufficient technique for Character Key Shortcuts",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.1.4"
+  },
+  {
+    "id": "C214",
+    "title": "Advisory technique for Character Key Shortcuts",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.1.4"
+  },
+  {
+    "id": "G221",
+    "title": "Sufficient technique for Timing Adjustable",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.2.1"
+  },
+  {
+    "id": "C221",
+    "title": "Advisory technique for Timing Adjustable",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.2.1"
+  },
+  {
+    "id": "G222",
+    "title": "Sufficient technique for Pause, Stop, Hide",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.2.2"
+  },
+  {
+    "id": "C222",
+    "title": "Advisory technique for Pause, Stop, Hide",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.2.2"
+  },
+  {
+    "id": "G223",
+    "title": "Sufficient technique for No Timing",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.2.3"
+  },
+  {
+    "id": "C223",
+    "title": "Advisory technique for No Timing",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.2.3"
+  },
+  {
+    "id": "G224",
+    "title": "Sufficient technique for Interruptions",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.2.4"
+  },
+  {
+    "id": "C224",
+    "title": "Advisory technique for Interruptions",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.2.4"
+  },
+  {
+    "id": "G225",
+    "title": "Sufficient technique for Re-authenticating",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.2.5"
+  },
+  {
+    "id": "C225",
+    "title": "Advisory technique for Re-authenticating",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.2.5"
+  },
+  {
+    "id": "G226",
+    "title": "Sufficient technique for Timeouts",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.2.6"
+  },
+  {
+    "id": "C226",
+    "title": "Advisory technique for Timeouts",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.2.6"
+  },
+  {
+    "id": "G231",
+    "title": "Sufficient technique for Three Flashes or Below Threshold",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.3.1"
+  },
+  {
+    "id": "C231",
+    "title": "Advisory technique for Three Flashes or Below Threshold",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.3.1"
+  },
+  {
+    "id": "G232",
+    "title": "Sufficient technique for Three Flashes",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.3.2"
+  },
+  {
+    "id": "C232",
+    "title": "Advisory technique for Three Flashes",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.3.2"
+  },
+  {
+    "id": "G233",
+    "title": "Sufficient technique for Animation from Interactions",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.3.3"
+  },
+  {
+    "id": "C233",
+    "title": "Advisory technique for Animation from Interactions",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.3.3"
+  },
+  {
+    "id": "G241",
+    "title": "Sufficient technique for Bypass Blocks",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.1"
+  },
+  {
+    "id": "C241",
+    "title": "Advisory technique for Bypass Blocks",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.1"
+  },
+  {
+    "id": "G242",
+    "title": "Sufficient technique for Page Titled",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.2"
+  },
+  {
+    "id": "C242",
+    "title": "Advisory technique for Page Titled",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.2"
+  },
+  {
+    "id": "G243",
+    "title": "Sufficient technique for Focus Order",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.3"
+  },
+  {
+    "id": "C243",
+    "title": "Advisory technique for Focus Order",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.3"
+  },
+  {
+    "id": "G244",
+    "title": "Sufficient technique for Link Purpose (In Context)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.4"
+  },
+  {
+    "id": "C244",
+    "title": "Advisory technique for Link Purpose (In Context)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.4"
+  },
+  {
+    "id": "G245",
+    "title": "Sufficient technique for Multiple Ways",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.5"
+  },
+  {
+    "id": "C245",
+    "title": "Advisory technique for Multiple Ways",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.5"
+  },
+  {
+    "id": "G246",
+    "title": "Sufficient technique for Headings and Labels",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.6"
+  },
+  {
+    "id": "C246",
+    "title": "Advisory technique for Headings and Labels",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.6"
+  },
+  {
+    "id": "G247",
+    "title": "Sufficient technique for Focus Visible",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.7"
+  },
+  {
+    "id": "C247",
+    "title": "Advisory technique for Focus Visible",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.7"
+  },
+  {
+    "id": "G248",
+    "title": "Sufficient technique for Location",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.8"
+  },
+  {
+    "id": "C248",
+    "title": "Advisory technique for Location",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.8"
+  },
+  {
+    "id": "G249",
+    "title": "Sufficient technique for Link Purpose (Link Only)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.9"
+  },
+  {
+    "id": "C249",
+    "title": "Advisory technique for Link Purpose (Link Only)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.9"
+  },
+  {
+    "id": "G2410",
+    "title": "Sufficient technique for Section Headings",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.10"
+  },
+  {
+    "id": "C2410",
+    "title": "Advisory technique for Section Headings",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.10"
+  },
+  {
+    "id": "G2411",
+    "title": "Sufficient technique for Focus Appearance",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.11"
+  },
+  {
+    "id": "C2411",
+    "title": "Advisory technique for Focus Appearance",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.11"
+  },
+  {
+    "id": "G2412",
+    "title": "Sufficient technique for Focus Not Obscured (Minimum)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.12"
+  },
+  {
+    "id": "C2412",
+    "title": "Advisory technique for Focus Not Obscured (Minimum)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.12"
+  },
+  {
+    "id": "G2413",
+    "title": "Sufficient technique for Focus Not Obscured (Enhanced)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.4.13"
+  },
+  {
+    "id": "C2413",
+    "title": "Advisory technique for Focus Not Obscured (Enhanced)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.4.13"
+  },
+  {
+    "id": "G251",
+    "title": "Sufficient technique for Pointer Gestures",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.1"
+  },
+  {
+    "id": "C251",
+    "title": "Advisory technique for Pointer Gestures",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.1"
+  },
+  {
+    "id": "G252",
+    "title": "Sufficient technique for Pointer Cancellation",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.2"
+  },
+  {
+    "id": "C252",
+    "title": "Advisory technique for Pointer Cancellation",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.2"
+  },
+  {
+    "id": "G253",
+    "title": "Sufficient technique for Label in Name",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.3"
+  },
+  {
+    "id": "C253",
+    "title": "Advisory technique for Label in Name",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.3"
+  },
+  {
+    "id": "G254",
+    "title": "Sufficient technique for Motion Actuation",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.4"
+  },
+  {
+    "id": "C254",
+    "title": "Advisory technique for Motion Actuation",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.4"
+  },
+  {
+    "id": "G255",
+    "title": "Sufficient technique for Target Size (Enhanced)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.5"
+  },
+  {
+    "id": "C255",
+    "title": "Advisory technique for Target Size (Enhanced)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.5"
+  },
+  {
+    "id": "G256",
+    "title": "Sufficient technique for Concurrent Input Mechanisms",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.6"
+  },
+  {
+    "id": "C256",
+    "title": "Advisory technique for Concurrent Input Mechanisms",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.6"
+  },
+  {
+    "id": "G257",
+    "title": "Sufficient technique for Dragging Movements",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.7"
+  },
+  {
+    "id": "C257",
+    "title": "Advisory technique for Dragging Movements",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.7"
+  },
+  {
+    "id": "G258",
+    "title": "Sufficient technique for Target Size (Minimum)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "2.5.8"
+  },
+  {
+    "id": "C258",
+    "title": "Advisory technique for Target Size (Minimum)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "2.5.8"
+  },
+  {
+    "id": "G311",
+    "title": "Sufficient technique for Language of Page",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.1.1"
+  },
+  {
+    "id": "C311",
+    "title": "Advisory technique for Language of Page",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.1.1"
+  },
+  {
+    "id": "G312",
+    "title": "Sufficient technique for Language of Parts",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.1.2"
+  },
+  {
+    "id": "C312",
+    "title": "Advisory technique for Language of Parts",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.1.2"
+  },
+  {
+    "id": "G313",
+    "title": "Sufficient technique for Unusual Words",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.1.3"
+  },
+  {
+    "id": "C313",
+    "title": "Advisory technique for Unusual Words",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.1.3"
+  },
+  {
+    "id": "G314",
+    "title": "Sufficient technique for Abbreviations",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.1.4"
+  },
+  {
+    "id": "C314",
+    "title": "Advisory technique for Abbreviations",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.1.4"
+  },
+  {
+    "id": "G315",
+    "title": "Sufficient technique for Reading Level",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.1.5"
+  },
+  {
+    "id": "C315",
+    "title": "Advisory technique for Reading Level",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.1.5"
+  },
+  {
+    "id": "G316",
+    "title": "Sufficient technique for Pronunciation",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.1.6"
+  },
+  {
+    "id": "C316",
+    "title": "Advisory technique for Pronunciation",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.1.6"
+  },
+  {
+    "id": "G321",
+    "title": "Sufficient technique for On Focus",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.2.1"
+  },
+  {
+    "id": "C321",
+    "title": "Advisory technique for On Focus",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.2.1"
+  },
+  {
+    "id": "G322",
+    "title": "Sufficient technique for On Input",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.2.2"
+  },
+  {
+    "id": "C322",
+    "title": "Advisory technique for On Input",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.2.2"
+  },
+  {
+    "id": "G323",
+    "title": "Sufficient technique for Consistent Navigation",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.2.3"
+  },
+  {
+    "id": "C323",
+    "title": "Advisory technique for Consistent Navigation",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.2.3"
+  },
+  {
+    "id": "G324",
+    "title": "Sufficient technique for Consistent Identification",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.2.4"
+  },
+  {
+    "id": "C324",
+    "title": "Advisory technique for Consistent Identification",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.2.4"
+  },
+  {
+    "id": "G325",
+    "title": "Sufficient technique for Change on Request",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.2.5"
+  },
+  {
+    "id": "C325",
+    "title": "Advisory technique for Change on Request",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.2.5"
+  },
+  {
+    "id": "G326",
+    "title": "Sufficient technique for Consistent Help",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.2.6"
+  },
+  {
+    "id": "C326",
+    "title": "Advisory technique for Consistent Help",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.2.6"
+  },
+  {
+    "id": "G331",
+    "title": "Sufficient technique for Error Identification",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.1"
+  },
+  {
+    "id": "C331",
+    "title": "Advisory technique for Error Identification",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.1"
+  },
+  {
+    "id": "G332",
+    "title": "Sufficient technique for Labels or Instructions",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.2"
+  },
+  {
+    "id": "C332",
+    "title": "Advisory technique for Labels or Instructions",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.2"
+  },
+  {
+    "id": "G333",
+    "title": "Sufficient technique for Error Suggestion",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.3"
+  },
+  {
+    "id": "C333",
+    "title": "Advisory technique for Error Suggestion",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.3"
+  },
+  {
+    "id": "G334",
+    "title": "Sufficient technique for Error Prevention (Legal, Financial, Data)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.4"
+  },
+  {
+    "id": "C334",
+    "title": "Advisory technique for Error Prevention (Legal, Financial, Data)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.4"
+  },
+  {
+    "id": "G335",
+    "title": "Sufficient technique for Help",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.5"
+  },
+  {
+    "id": "C335",
+    "title": "Advisory technique for Help",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.5"
+  },
+  {
+    "id": "G336",
+    "title": "Sufficient technique for Error Prevention (All)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.6"
+  },
+  {
+    "id": "C336",
+    "title": "Advisory technique for Error Prevention (All)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.6"
+  },
+  {
+    "id": "G337",
+    "title": "Sufficient technique for Redundant Entry",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.7"
+  },
+  {
+    "id": "C337",
+    "title": "Advisory technique for Redundant Entry",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.7"
+  },
+  {
+    "id": "G338",
+    "title": "Sufficient technique for Accessible Authentication (Minimum)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.8"
+  },
+  {
+    "id": "C338",
+    "title": "Advisory technique for Accessible Authentication (Minimum)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.8"
+  },
+  {
+    "id": "G339",
+    "title": "Sufficient technique for Accessible Authentication (Enhanced)",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "3.3.9"
+  },
+  {
+    "id": "C339",
+    "title": "Advisory technique for Accessible Authentication (Enhanced)",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "3.3.9"
+  },
+  {
+    "id": "G411",
+    "title": "Sufficient technique for Parsing",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "4.1.1"
+  },
+  {
+    "id": "C411",
+    "title": "Advisory technique for Parsing",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "4.1.1"
+  },
+  {
+    "id": "G412",
+    "title": "Sufficient technique for Name, Role, Value",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "4.1.2"
+  },
+  {
+    "id": "C412",
+    "title": "Advisory technique for Name, Role, Value",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "4.1.2"
+  },
+  {
+    "id": "G413",
+    "title": "Sufficient technique for Status Messages",
+    "technology": "General",
+    "type": "sufficient",
+    "criterion": "4.1.3"
+  },
+  {
+    "id": "C413",
+    "title": "Advisory technique for Status Messages",
+    "technology": "CSS",
+    "type": "advisory",
+    "criterion": "4.1.3"
+  }
+]

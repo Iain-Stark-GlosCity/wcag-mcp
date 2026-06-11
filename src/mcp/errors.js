@@ -1,0 +1,1 @@
+export function jsonRpcError(error) { return { code: error.code || -32603, message: error.message || 'Internal error', data: { hint: error.hint, error_code: typeof error.code === 'string' ? error.code : undefined } }; }

@@ -1,0 +1,1 @@
+[{"rule_id":"public-sector.content.plain-english","applies_to":["content-page","form-label","error-message"],"rule":"Use plain English and task-based wording. Avoid legal or technical wording unless necessary.","source_type":"local-doctrine","wcag_related":["3.1.5","3.3.2","3.3.3"],"human_review_required":true}]

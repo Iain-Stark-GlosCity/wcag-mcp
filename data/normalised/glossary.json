@@ -1,0 +1,14 @@
+[
+  {
+    "term": "programmatically determined",
+    "definition": "Determined by software from author-supplied data provided in a way that different user agents can extract and present to users."
+  },
+  {
+    "term": "name",
+    "definition": "Text by which software can identify a component within Web content to the user."
+  },
+  {
+    "term": "contrast ratio",
+    "definition": "A measure of the difference in perceived luminance between two colors."
+  }
+]
