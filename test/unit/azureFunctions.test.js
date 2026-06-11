@@ -26,6 +26,13 @@ test('Azure Functions metadata declares HTTP functions', () => {
   }
 });
 
+test('MCP Azure Function handler rejects non-POST requests', async () => {
+  const response = await mcpHandler({ method: 'GET' });
+
+  assert.equal(response.status, 405);
+  assert.equal(response.headers.Allow, 'POST');
+});
+
 test('MCP Azure Function handler accepts v3 request body shape', async () => {
   const response = await mcpHandler({}, {
     rawBody: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' })
@@ -34,4 +41,5 @@ test('MCP Azure Function handler accepts v3 request body shape', async () => {
   assert.equal(response.status, 200);
   assert.equal(response.jsonBody.id, 1);
   assert.ok(response.jsonBody.result.tools.length > 0);
+  assert.ok(response.headers['Access-Control-Allow-Origin']);
 });

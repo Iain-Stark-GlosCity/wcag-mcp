@@ -12,7 +12,7 @@ Suggested Azure Functions routes:
 - `GET /api/accessibility-health` — health and data counts.
 - `GET /api/accessibility-about` — source, licence, and attribution metadata.
 
-The MCP endpoint supports `initialize`, `notifications/initialized`, `ping`, `tools/list`, and `tools/call`.
+The MCP endpoint supports `initialize`, `notifications/initialized`, `ping`, `tools/list`, and `tools/call`. Use the HTTPS Azure Functions URL (for example `https://<app>.azurewebsites.net/api/accessibility-mcp`) when adding the remote MCP server in ChatGPT. The endpoint only accepts Streamable HTTP-style JSON-RPC POST requests and supports the `search`/`fetch` tool names expected by ChatGPT data-only app and deep research compatibility checks.
 
 ## Tools
 
