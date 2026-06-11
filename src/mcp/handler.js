@@ -1,6 +1,6 @@
 import { tools, findTool } from './registry.js';
 import { jsonRpcError } from './errors.js';
-import { protocolVersion, serverInfo } from './protocol.js';
+import { protocolVersion, serverInfo, supportedProtocolVersions } from './protocol.js';
 
 const instructions = 'Use search to find relevant WCAG criteria, then fetch to retrieve full citation-ready guidance. All tools are read-only accessibility guidance helpers.';
 
@@ -18,12 +18,31 @@ function toolResult(payload) {
   };
 }
 
+function hasResponseId(request) {
+  return Object.hasOwn(request || {}, 'id');
+}
+
+function negotiatedProtocolVersion(params = {}) {
+  const clientVersion = params.protocolVersion;
+  if (supportedProtocolVersions.includes(clientVersion)) return clientVersion;
+  return protocolVersion;
+}
+
 export async function handleJsonRpcRequest(request) {
   const { method, params={}, id } = request || {};
+
+  if (!method || method.startsWith('notifications/')) return null;
+
   try {
-    if (method === 'notifications/initialized') return null;
     let result;
-    if (method === 'initialize') result = { protocolVersion, capabilities:{ tools:{ listChanged:false } }, serverInfo, instructions };
+    if (method === 'initialize') {
+      result = {
+        protocolVersion: negotiatedProtocolVersion(params),
+        capabilities:{ tools:{ listChanged:false } },
+        serverInfo,
+        instructions
+      };
+    }
     else if (method === 'ping') result = {};
     else if (method === 'tools/list') result = { tools: tools.map(toolDescriptor) };
     else if (method === 'tools/call') {
@@ -32,7 +51,20 @@ export async function handleJsonRpcRequest(request) {
       result = toolResult(await tool.handler(params.arguments || {}));
     }
     else { const e=new Error(`Unknown method: ${method}`); e.code=-32601; throw e; }
+
+    if (!hasResponseId(request)) return null;
     return { jsonrpc:'2.0', id, result };
-  } catch(error) { return { jsonrpc:'2.0', id, error: jsonRpcError(error) }; }
+  } catch(error) {
+    if (!hasResponseId(request)) return null;
+    return { jsonrpc:'2.0', id, error: jsonRpcError(error) };
+  }
 }
-export async function handleJsonRpcBody(body) { const request=typeof body==='string'?JSON.parse(body):body; if(Array.isArray(request)){ const responses=[]; for(const item of request){ const res=await handleJsonRpcRequest(item); if(res) responses.push(res);} return responses; } return handleJsonRpcRequest(request); }
+export async function handleJsonRpcBody(body) {
+  const request=typeof body==='string'?JSON.parse(body):body;
+  if(Array.isArray(request)){
+    const responses=[];
+    for(const item of request){ const res=await handleJsonRpcRequest(item); if(res) responses.push(res);}
+    return responses.length ? responses : null;
+  }
+  return handleJsonRpcRequest(request);
+}

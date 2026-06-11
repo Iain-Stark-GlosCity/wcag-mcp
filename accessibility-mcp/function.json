@@ -7,9 +7,7 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "request",
-      "methods": [
-        "post"
-      ],
+      "methods": ["get", "post", "options"],
       "route": "accessibility-mcp"
     },
     {
