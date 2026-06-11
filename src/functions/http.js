@@ -1,14 +1,35 @@
 import { protocolVersion } from '../mcp/protocol.js';
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, MCP-Protocol-Version'
+};
+
 export function jsonRpcResponse(status, jsonBody) {
   return {
     status,
     headers: {
       'Content-Type': 'application/json',
-      'MCP-Protocol-Version': protocolVersion
+      'MCP-Protocol-Version': protocolVersion,
+      ...corsHeaders
     },
     jsonBody
   };
+}
+
+export function corsPreflightResponse() {
+  return {
+    status: 204,
+    headers: {
+      ...corsHeaders,
+      'Access-Control-Max-Age': '86400'
+    }
+  };
+}
+
+export function notificationResponse() {
+  return { status: 202, headers: corsHeaders };
 }
 
 export function methodFor(request) {
