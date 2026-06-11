@@ -7,10 +7,6 @@ export async function handler(requestOrContext, maybeRequest) {
 
   if (method === 'OPTIONS') return emptyResponse(204);
 
-  if (method === 'GET') {
-    return emptyResponse(405, { Allow: 'POST, OPTIONS' });
-  }
-
   if (method !== 'POST') {
     return jsonResponse(405, { error: 'Method not allowed. Use POST for MCP JSON-RPC requests.' }, { Allow: 'POST, OPTIONS' });
   }
