@@ -1,0 +1,19 @@
+{
+  "scriptFile": "../src/functions/accessibilityAbout.js",
+  "entryPoint": "handler",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "request",
+      "methods": ["get"],
+      "route": "accessibility-about"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    }
+  ]
+}

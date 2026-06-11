@@ -1,0 +1,19 @@
+{
+  "scriptFile": "../src/functions/accessibilityMcp.js",
+  "entryPoint": "handler",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "request",
+      "methods": ["post"],
+      "route": "accessibility-mcp"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    }
+  ]
+}

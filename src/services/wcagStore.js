@@ -8,6 +8,25 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const raw = require(join(__dirname, '..', '..', 'data', 'wcag.json'));
 
 function stripHtml(value = '') { return String(value).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim(); }
+function normalizeTerm(value = '') { return stripHtml(value).toLowerCase().replace(/^dfn-/, '').replace(/[\s_-]+/g, ' ').trim(); }
+
+function buildGlossary() {
+  const seen = new Set();
+  return (raw.terms || [])
+    .map(t => {
+      const term = stripHtml(t.term || t.name || String(t.id || '').replace(/^dfn-/, '').replace(/-/g, ' '));
+      const definition = stripHtml(t.definition || t.content || '');
+      return { term, definition, id: t.id };
+    })
+    .filter(t => t.term && t.definition)
+    .filter(t => {
+      const key = normalizeTerm(t.term);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .map(({ term, definition }) => ({ term, definition }));
+}
 
 function buildCriteria() {
   const out = [];
@@ -37,7 +56,7 @@ function buildCriteria() {
 
 export const wcagRaw = raw;
 export const criteria = buildCriteria();
-export const glossary = (raw.terms || []).map(t => ({ term: t.term || t.id, definition: stripHtml(t.definition || t.content || '') }));
+export const glossary = buildGlossary();
 
 export function stats() {
   return {
@@ -77,6 +96,10 @@ export function getTechniques(ref, type) {
 }
 
 export function findGlossaryTerm(term) {
-  const needle = String(term || '').toLowerCase();
-  return glossary.find(t => String(t.term).toLowerCase() === needle || String(t.term).toLowerCase().includes(needle)) || null;
+  const needle = normalizeTerm(term);
+  if (!needle) return null;
+  return glossary.find(t => {
+    const candidate = normalizeTerm(t.term);
+    return candidate === needle || candidate.includes(needle);
+  }) || null;
 }
