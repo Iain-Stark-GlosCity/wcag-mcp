@@ -2,6 +2,19 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { handleJsonRpcBody } from '../../src/mcp/handler.js';
 
+test('MCP initialize negotiates the advertised protocol version', async () => {
+  const initialized = await handleJsonRpcBody({ jsonrpc:'2.0', id:0, method:'initialize', params:{ protocolVersion:'2025-06-18' } });
+
+  assert.equal(initialized.result.protocolVersion, '2025-06-18');
+  assert.equal(initialized.result.capabilities.tools.listChanged, false);
+});
+
+test('MCP notifications produce no JSON-RPC response', async () => {
+  const initialized = await handleJsonRpcBody({ jsonrpc:'2.0', method:'notifications/initialized' });
+
+  assert.equal(initialized, null);
+});
+
 test('MCP tools/list and call work', async () => {
   const listed = await handleJsonRpcBody({ jsonrpc:'2.0', id:1, method:'tools/list' });
   assert.ok(listed.result.tools.some(t => t.name === 'accessibility_advise_text_layout'));
