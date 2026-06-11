@@ -1,8 +1,7 @@
 import { handleJsonRpcBody } from '../mcp/handler.js';
 import { emptyResponse, jsonResponse, methodFor, readRequestBody } from './http.js';
 
-export async function handler(requestOrContext, maybeRequest) {
-  const request = maybeRequest || requestOrContext;
+export async function handler(request = {}) {
   const method = methodFor(request);
 
   if (method === 'OPTIONS') return emptyResponse(204);
