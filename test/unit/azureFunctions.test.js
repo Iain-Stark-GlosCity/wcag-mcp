@@ -1,8 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { handler as mcpHandler } from '../../src/functions/accessibilityMcp.js';
 import { handler as healthHandler } from '../../src/functions/accessibilityHealth.js';
+
+const expectedFunctions = [
+  ['accessibility-mcp/function.json', 'accessibility-mcp', ['post'], '../src/functions/accessibilityMcp.js'],
+  ['accessibility-health/function.json', 'accessibility-health', ['get', 'options'], '../src/functions/accessibilityHealth.js'],
+  ['accessibility-about/function.json', 'accessibility-about', ['get', 'options'], '../src/functions/accessibilityAbout.js']
+];
 
 test('Azure Functions app is configured for the v4 Node programming model on Node 22', () => {
   const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
@@ -13,10 +19,18 @@ test('Azure Functions app is configured for the v4 Node programming model on Nod
   assert.ok(pkg.dependencies['@azure/functions'].startsWith('^4.'));
 });
 
-test('no legacy v3 function.json files exist that would cause double-registration', () => {
-  const legacyPaths = ['accessibility-mcp/function.json', 'accessibility-health/function.json', 'accessibility-about/function.json'];
-  for (const path of legacyPaths) {
-    assert.ok(!existsSync(path), `${path} must not exist — v3 function.json files conflict with v4 app.http() registration`);
+test('legacy Azure Functions metadata remains compatible with HTTP fallback discovery', () => {
+  for (const [path, route, methods, scriptFile] of expectedFunctions) {
+    const metadata = JSON.parse(readFileSync(path, 'utf8'));
+    const trigger = metadata.bindings.find(binding => binding.type === 'httpTrigger');
+    const output = metadata.bindings.find(binding => binding.type === 'http');
+
+    assert.equal(metadata.scriptFile, scriptFile);
+    assert.equal(metadata.entryPoint, 'handler');
+    assert.equal(trigger.authLevel, 'anonymous');
+    assert.equal(trigger.route, route);
+    assert.deepEqual(trigger.methods, methods);
+    assert.equal(output.name, '$return');
   }
 });
 

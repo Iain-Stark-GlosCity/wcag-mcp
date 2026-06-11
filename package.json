@@ -14,7 +14,11 @@
     "data/normalised/",
     "README.md",
     "ATTRIBUTION.md",
-    "host.json"
+    "host.json",
+    "src/functions/register.js",
+    "accessibility-mcp/",
+    "accessibility-health/",
+    "accessibility-about/"
   ],
   "keywords": [
     "mcp",
