@@ -14,11 +14,7 @@
     "data/normalised/",
     "README.md",
     "ATTRIBUTION.md",
-    "host.json",
-    "src/functions/register.js",
-    "accessibility-mcp/",
-    "accessibility-health/",
-    "accessibility-about/"
+    "host.json"
   ],
   "keywords": [
     "mcp",
@@ -42,7 +38,9 @@
     "node": ">=22 <23"
   },
   "dependencies": {
-    "@azure/functions": "^4.11.1",
+    "@azure/functions": "^4.11.1"
+  },
+  "devDependencies": {
     "jsdom": "^25.0.1"
   },
   "scripts": {

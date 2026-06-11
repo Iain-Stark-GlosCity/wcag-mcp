@@ -1,14 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { handler as mcpHandler } from '../../src/functions/accessibilityMcp.js';
 import { handler as healthHandler } from '../../src/functions/accessibilityHealth.js';
-
-const expectedFunctions = [
-  ['accessibility-mcp/function.json', 'accessibility-mcp', ['post'], '../src/functions/accessibilityMcp.js'],
-  ['accessibility-health/function.json', 'accessibility-health', ['get', 'options'], '../src/functions/accessibilityHealth.js'],
-  ['accessibility-about/function.json', 'accessibility-about', ['get', 'options'], '../src/functions/accessibilityAbout.js']
-];
 
 test('Azure Functions app is configured for the v4 Node programming model on Node 22', () => {
   const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
@@ -19,18 +13,16 @@ test('Azure Functions app is configured for the v4 Node programming model on Nod
   assert.ok(pkg.dependencies['@azure/functions'].startsWith('^4.'));
 });
 
-test('legacy Azure Functions metadata remains compatible with HTTP fallback discovery', () => {
-  for (const [path, route, methods, scriptFile] of expectedFunctions) {
-    const metadata = JSON.parse(readFileSync(path, 'utf8'));
-    const trigger = metadata.bindings.find(binding => binding.type === 'httpTrigger');
-    const output = metadata.bindings.find(binding => binding.type === 'http');
+test('v4 entry point loads and registers without throwing', async () => {
+  // Azure discovers functions by executing package.json "main"; if this
+  // import throws (e.g. a missing transitive dependency), the deployed app
+  // silently has zero functions.
+  await assert.doesNotReject(() => import('../../src/functions/register.js'));
+});
 
-    assert.equal(metadata.scriptFile, scriptFile);
-    assert.equal(metadata.entryPoint, 'handler');
-    assert.equal(trigger.authLevel, 'anonymous');
-    assert.equal(trigger.route, route);
-    assert.deepEqual(trigger.methods, methods);
-    assert.equal(output.name, '$return');
+test('no v3 function.json files exist alongside the v4 model', () => {
+  for (const path of ['accessibility-mcp/function.json', 'accessibility-health/function.json', 'accessibility-about/function.json']) {
+    assert.ok(!existsSync(path), `${path} must not exist — mixing function.json with app.http() registration breaks the worker`);
   }
 });
 
