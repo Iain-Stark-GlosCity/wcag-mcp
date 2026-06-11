@@ -1,39 +1,35 @@
 import { protocolVersion } from '../mcp/protocol.js';
 
-const corsHeaders = {
+export const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, MCP-Protocol-Version'
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Accept, Authorization, Mcp-Session-Id, MCP-Protocol-Version',
+  'Access-Control-Expose-Headers': 'MCP-Protocol-Version',
+  Vary: 'Origin'
 };
 
-export function jsonRpcResponse(status, jsonBody) {
+export function jsonResponse(status, jsonBody, headers = {}) {
+  const baseHeaders = {
+    ...corsHeaders,
+    'MCP-Protocol-Version': protocolVersion,
+    ...headers
+  };
+
+  if (jsonBody === undefined) return { status, headers: baseHeaders };
+
   return {
     status,
-    headers: {
-      'Content-Type': 'application/json',
-      'MCP-Protocol-Version': protocolVersion,
-      ...corsHeaders
-    },
+    headers: { 'Content-Type': 'application/json', ...baseHeaders },
     jsonBody
   };
 }
 
-export function corsPreflightResponse() {
-  return {
-    status: 204,
-    headers: {
-      ...corsHeaders,
-      'Access-Control-Max-Age': '86400'
-    }
-  };
-}
-
-export function notificationResponse() {
-  return { status: 202, headers: corsHeaders };
+export function emptyResponse(status = 204, headers = {}) {
+  return { status, headers: { ...corsHeaders, 'MCP-Protocol-Version': protocolVersion, ...headers } };
 }
 
 export function methodFor(request) {
-  return String(request?.method || request?.httpMethod || 'POST').toUpperCase();
+  return String(request?.method || request?.httpMethod || 'GET').toUpperCase();
 }
 
 export async function readRequestBody(request) {

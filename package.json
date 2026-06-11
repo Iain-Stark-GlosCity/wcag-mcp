@@ -15,7 +15,10 @@
     "README.md",
     "ATTRIBUTION.md",
     "host.json",
-    "src/functions/register.js"
+    "src/functions/register.js",
+    "accessibility-mcp/",
+    "accessibility-health/",
+    "accessibility-about/"
   ],
   "keywords": [
     "mcp",

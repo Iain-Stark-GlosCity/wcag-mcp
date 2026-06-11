@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { handleJsonRpcBody } from '../../src/mcp/handler.js';
 
-test('MCP initialize negotiates the advertised protocol version', async () => {
+test('MCP initialize negotiates the current Streamable HTTP protocol', async () => {
   const initialized = await handleJsonRpcBody({ jsonrpc:'2.0', id:0, method:'initialize', params:{ protocolVersion:'2025-06-18' } });
 
   assert.equal(initialized.result.protocolVersion, '2025-06-18');

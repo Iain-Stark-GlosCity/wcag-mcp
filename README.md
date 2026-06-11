@@ -4,21 +4,24 @@ A cloud-hosted Accessibility Advisor MCP for AI-assisted council website generat
 
 The server is not a scanner-first product. It exposes structured JSON tools that turn source-backed WCAG 2.2 criteria into practical build rules, CSS hints, automation boundaries, human-review prompts, and audit trace metadata.
 
-## Endpoint
+## Endpoints
 
-Use this Azure Functions v4 route when adding the remote MCP server in ChatGPT:
+Suggested Azure Functions routes:
 
 - `POST /api/accessibility-mcp` — JSON-RPC 2.0 MCP endpoint.
+- `GET /api/accessibility-health` — health and data counts.
+- `GET /api/accessibility-about` — source, licence, and attribution metadata.
 
-The deployed Function App must run on Azure Functions v4 with Node.js 22. The MCP endpoint is intentionally POST-only and only accepts standard JSON-RPC MCP requests such as `initialize`, `ping`, `tools/list`, and `tools/call`.
+The MCP endpoint supports `initialize`, `notifications/initialized`, `ping`, `tools/list`, and `tools/call`. Use the HTTPS Azure Functions URL (for example `https://<app>.azurewebsites.net/api/accessibility-mcp`) when adding the remote MCP server in ChatGPT. The endpoint is configured for Azure Functions v4 on Node.js 22 and implements Streamable HTTP-style JSON-RPC: `POST` handles MCP messages, `OPTIONS` handles browser/ChatGPT CORS preflight requests, and `GET` returns `405 Method Not Allowed` so clients can identify that no standalone SSE stream is offered. It advertises MCP protocol version `2025-06-18` and supports the `search`/`fetch` tool names expected by ChatGPT data-only app and deep research compatibility checks.
+
 
 ## Azure Functions deployment
 
-This repository uses the Azure Functions Node.js v4 programming model only:
+This repository uses the Azure Functions Node.js v4 programming model:
 
-- `package.json` sets `main` to `src/functions/register.js`, where the HTTP function is registered in code with `app.http()`.
+- `package.json` sets `main` to `src/functions/register.js`, where the HTTP functions are registered in code with `app.http()`.
 - `engines.node` is pinned to Node.js 22 (`>=22 <23`). Configure the Function App runtime to Node 22 and `FUNCTIONS_EXTENSION_VERSION=~4` in Azure.
-- There are no `function.json` HTTP triggers; the v4 app registration is the runtime source of truth.
+- The legacy `function.json` files are kept only as fallback/discovery metadata for tooling; the v4 app registration is the source of truth at runtime.
 
 ## Tools
 

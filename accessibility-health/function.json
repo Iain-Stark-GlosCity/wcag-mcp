@@ -1,0 +1,19 @@
+{
+  "scriptFile": "../src/functions/accessibilityHealth.js",
+  "entryPoint": "handler",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "request",
+      "methods": ["get", "options"],
+      "route": "accessibility-health"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    }
+  ]
+}

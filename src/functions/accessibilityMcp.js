@@ -1,27 +1,26 @@
 import { handleJsonRpcBody } from '../mcp/handler.js';
-import { corsPreflightResponse, jsonRpcResponse, methodFor, notificationResponse, readRequestBody } from './http.js';
+import { emptyResponse, jsonResponse, methodFor, readRequestBody } from './http.js';
 
 export async function handler(requestOrContext, maybeRequest) {
   const request = maybeRequest || requestOrContext;
   const method = methodFor(request);
 
-  if (method === 'OPTIONS') return corsPreflightResponse();
+  if (method === 'OPTIONS') return emptyResponse(204);
+
+  if (method === 'GET') {
+    return emptyResponse(405, { Allow: 'POST, OPTIONS' });
+  }
 
   if (method !== 'POST') {
-    return jsonRpcResponse(405, {
-      jsonrpc: '2.0',
-      id: null,
-      error: { code: -32600, message: 'Method not allowed. MCP JSON-RPC is available on POST only.' }
-    });
+    return jsonResponse(405, { error: 'Method not allowed. Use POST for MCP JSON-RPC requests.' }, { Allow: 'POST, OPTIONS' });
   }
 
   try {
     const body = await readRequestBody(request);
     const jsonBody = await handleJsonRpcBody(body);
-    if (jsonBody === null) return notificationResponse();
-    return jsonRpcResponse(200, jsonBody);
+    return jsonResponse(jsonBody ? 200 : 202, jsonBody || undefined);
   } catch(error) {
-    return jsonRpcResponse(400, { jsonrpc:'2.0', id:null, error:{ code:-32700, message:`Parse error: ${error.message}` } });
+    return jsonResponse(400, { jsonrpc:'2.0', id:null, error:{ code:-32700, message:`Parse error: ${error.message}` } });
   }
 }
 export default handler;
