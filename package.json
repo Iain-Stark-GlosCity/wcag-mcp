@@ -13,7 +13,11 @@
     "data/wcag.json",
     "data/normalised/",
     "README.md",
-    "ATTRIBUTION.md"
+    "ATTRIBUTION.md",
+    "host.json",
+    "accessibility-mcp/",
+    "accessibility-health/",
+    "accessibility-about/"
   ],
   "keywords": [
     "mcp",
