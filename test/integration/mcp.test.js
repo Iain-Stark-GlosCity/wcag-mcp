@@ -18,6 +18,7 @@ test('MCP notifications produce no JSON-RPC response', async () => {
 test('MCP tools/list and call work', async () => {
   const listed = await handleJsonRpcBody({ jsonrpc:'2.0', id:1, method:'tools/list' });
   assert.ok(listed.result.tools.some(t => t.name === 'accessibility_advise_text_layout'));
+  assert.ok(listed.result.tools.some(t => t.name === 'accessibility_validate_aria_attributes'));
   assert.ok(listed.result.tools.some(t => t.name === 'search'));
   assert.ok(listed.result.tools.some(t => t.name === 'fetch'));
   assert.ok(listed.result.tools.find(t => t.name === 'search').outputSchema);

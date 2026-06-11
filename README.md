@@ -39,8 +39,9 @@ Advisor tools:
 - `accessibility_advise_colour_contrast`
 - `accessibility_advise_focus_visible`
 - `accessibility_advise_form_errors`
-- `accessibility_advise_component`
+- `accessibility_advise_component` (accepts component prose and/or an `html` fragment for ARIA pattern matching)
 - `accessibility_check_css_rule`
+- `accessibility_validate_aria_attributes`
 - `accessibility_get_component_requirements`
 
 ## Data pipeline

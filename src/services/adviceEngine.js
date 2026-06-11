@@ -2,36 +2,53 @@ import { findCriterion } from './wcagStore.js';
 import { resolveTopic } from './topicResolver.js';
 import { withSourceMetadata } from './sourceBuilder.js';
 import { confidenceFor } from './confidence.js';
+import { matchAriaPattern, candidatePatterns } from './patternLibrary.js';
 
 function criterionSummary(mapping) {
   const criterion = findCriterion(mapping.id);
   if (!criterion) return null;
-  return { id: criterion.id, title: criterion.title, level: criterion.level, relevance: mapping.relationship || 'related', reason: mapping.reason, sources: criterion.sources };
+  return { id: criterion.id, title: criterion.title, level: criterion.level, relevance: mapping.relationship || 'related', reason: mapping.reason, confidence_score: mapping.confidence_score, pattern: mapping.pattern, sources: criterion.sources };
 }
 
-function noMapping(tool) {
+function noMapping(tool, candidates = []) {
+  const criteria = candidates.flatMap(candidate => candidate.pattern.criteria.map(mapping => ({ ...mapping, confidence_score: candidate.score, pattern: candidate.pattern.name }))).map(criterionSummary).filter(Boolean);
+  const sources = criteria.flatMap(c => Object.values(c.sources));
+  const candidateCriteria = criteria.map(c => ({ ...c, confidence: 'low' }));
   return withSourceMetadata({
-    answer: 'No direct WCAG success criterion was confidently identified. Human accessibility review required.',
-    decision: 'human_review', criteria: [], implementation: {}, automated_checks: [], human_review: ['Ask a qualified accessibility reviewer to map the question before treating advice as WCAG-backed.'], limitations: ['No source-backed criterion means no authoritative WCAG answer.'], confidence: 'low', sources: [], answer_markdown: 'No direct WCAG success criterion was confidently identified. Human accessibility review required.'
-  }, { tool, criteria_used: [] });
+    answer: candidateCriteria.length ? 'No direct WCAG success criterion was confidently identified. Candidate criteria are provided for human review; implementation advice is suppressed until the pattern is confirmed.' : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.',
+    decision: 'human_review',
+    criterion_identification: { status: 'low_confidence', criteria: candidateCriteria, candidate_patterns: candidates.map(c => ({ id: c.pattern.id, name: c.pattern.name, confidence_score: c.score, evidence: c.evidence })) },
+    criteria: candidateCriteria,
+    implementation: {},
+    automated_checks: [],
+    human_review: ['Ask a qualified accessibility reviewer to confirm the pattern and criterion mapping before treating advice as WCAG-backed.'],
+    limitations: ['Low-confidence criterion identification suppresses implementation advice.'],
+    confidence: 'low',
+    sources,
+    answer_markdown: candidateCriteria.length ? `### Candidate criteria for human review\n${candidateCriteria.map(c => `- ${c.id} ${c.title} (low confidence)`).join('\n')}` : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.'
+  }, { tool, criteria_used: candidateCriteria.map(c => c.id) });
 }
 
-function buildAdvice(tool, answer, criteriaMappings, implementation, automated_checks, human_review, limitations = []) {
+function buildAdvice(tool, answer, criteriaMappings, implementation, automated_checks, human_review, limitations = [], extras = {}) {
   const criteria = criteriaMappings.map(criterionSummary).filter(Boolean);
   if (!criteria.length) return noMapping(tool);
-  const sources = criteria.flatMap(c => Object.values(c.sources));
+  const confidence = confidenceFor(criteria);
+  const sources = [...criteria.flatMap(c => Object.values(c.sources)), ...(extras.sources || [])];
+  const implementationAdvice = confidence === 'low' ? {} : implementation;
   return withSourceMetadata({
     answer,
     decision: human_review?.length ? 'caution' : 'pass',
+    criterion_identification: { status: 'identified', confidence, criteria },
     criteria,
-    implementation,
+    implementation: implementationAdvice,
     automated_checks,
     human_review,
-    limitations,
-    confidence: confidenceFor(criteria),
+    limitations: confidence === 'low' ? [...limitations, 'Implementation advice suppressed because criterion identification is low confidence.'] : limitations,
+    confidence,
     sources,
-    answer_markdown: `### Answer\n${answer}\n\n### WCAG criteria\n${criteria.map(c => `- ${c.id} ${c.title} (Level ${c.level})`).join('\n')}`
-  }, { tool, criteria_used: criteria.map(c => c.id) });
+    pattern: extras.pattern,
+    answer_markdown: `### Applicable criteria\n${criteria.map(c => `- ${c.id} ${c.title} (Level ${c.level})`).join('\n')}\n\n### Implementation guidance\n${confidence === 'low' ? 'Suppressed pending human review.' : answer}`
+  }, { tool, criteria_used: criteria.map(c => c.id), pattern: extras.pattern?.id });
 }
 
 export function adviseTextLayout({ question = '', target_level = 'AA', context = '' } = {}) {
@@ -66,10 +83,22 @@ export function adviseFormErrors({ target_level = 'AA', context = '' } = {}) {
     ['Review whether suggestions are accurate, plain English, and do not compromise security.']);
 }
 
-export function adviseComponent({ component = '', target_level = 'AA', context = '' } = {}) {
-  const lower = component.toLowerCase();
+export function adviseComponent({ component = '', target_level = 'AA', context = '', html = '' } = {}) {
+  const patternMatch = matchAriaPattern({ component, context, html });
+  if (patternMatch && patternMatch.score >= 0.5) {
+    const { pattern, score, evidence } = patternMatch;
+    return buildAdvice('accessibility_advise_component',
+      `${pattern.name} matches the ${pattern.apg}. First apply the identified WCAG criteria, then use the implementation guidance for this pattern.`,
+      pattern.criteria,
+      { ...pattern.implementation, target_level, context, html_snippet_received: Boolean(html) },
+      ['Check keyboard operation against the named ARIA pattern.', 'Check required role/name/value states and relationships.', 'Run accessibility_validate_aria_attributes on the HTML snippet when available.'],
+      ['Confirm the component behaviour in a browser with keyboard and assistive technology smoke testing.'],
+      ['ARIA pattern matching is based on supplied prose and/or HTML; it does not execute JavaScript.'],
+      { pattern: { id: pattern.id, name: pattern.name, apg: pattern.apg, confidence_score: score, evidence }, sources: [pattern.source] });
+  }
+
+  const lower = `${component} ${context} ${html}`.toLowerCase();
   if (lower.includes('error')) return adviseFormErrors({ target_level, context: `${context} ${component}` });
   if (lower.includes('body') || lower.includes('content')) return adviseTextLayout({ target_level, context: `${context} ${component}` });
-  if (lower.includes('button') || lower.includes('accordion') || lower.includes('modal') || lower.includes('link')) return adviseFocusVisible({ target_level, context: `${context} ${component}` });
-  return noMapping('accessibility_advise_component');
+  return noMapping('accessibility_advise_component', candidatePatterns({ component, context, html }));
 }
