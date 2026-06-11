@@ -8,9 +8,7 @@
       "direction": "in",
       "name": "request",
       "methods": [
-        "get",
-        "post",
-        "options"
+        "post"
       ],
       "route": "accessibility-mcp"
     },

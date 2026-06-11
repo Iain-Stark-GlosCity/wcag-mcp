@@ -1,10 +1,9 @@
 import { handleJsonRpcBody } from '../mcp/handler.js';
-import { protocolVersion, serverInfo } from '../mcp/protocol.js';
-import { tools } from '../mcp/registry.js';
+import { protocolVersion } from '../mcp/protocol.js';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+  'Access-Control-Allow-Methods': 'POST',
   'Access-Control-Allow-Headers': 'Content-Type, Accept, Authorization, Mcp-Session-Id, MCP-Protocol-Version',
   'Access-Control-Expose-Headers': 'MCP-Protocol-Version'
 };
@@ -29,17 +28,7 @@ export async function handler(requestOrContext, maybeRequest) {
   const request = maybeRequest || requestOrContext;
   const method = methodFor(request);
 
-  if (method === 'OPTIONS') return { status: 204, headers: corsHeaders };
-  if (method === 'GET') {
-    return response(200, {
-      ...serverInfo,
-      protocolVersion,
-      transport: 'streamable-http',
-      message: 'POST JSON-RPC 2.0 MCP requests to this endpoint.',
-      tools: tools.map(({ name, description }) => ({ name, description }))
-    });
-  }
-  if (method !== 'POST') return response(405, { error: 'Method not allowed. Use POST for MCP JSON-RPC requests.' }, { Allow: 'GET,POST,OPTIONS' });
+  if (method !== 'POST') return response(405, { error: 'Method not allowed. Use POST for MCP JSON-RPC requests.' }, { Allow: 'POST' });
 
   try {
     const body = await readRequestBody(request);

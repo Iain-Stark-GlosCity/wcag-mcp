@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { handler as mcpHandler } from '../../src/functions/accessibilityMcp.js';
 
 const expectedFunctions = [
-  ['accessibility-mcp/function.json', 'accessibility-mcp', ['get', 'post', 'options'], '../src/functions/accessibilityMcp.js'],
+  ['accessibility-mcp/function.json', 'accessibility-mcp', ['post'], '../src/functions/accessibilityMcp.js'],
   ['accessibility-health/function.json', 'accessibility-health', ['get'], '../src/functions/accessibilityHealth.js'],
   ['accessibility-about/function.json', 'accessibility-about', ['get'], '../src/functions/accessibilityAbout.js']
 ];
@@ -26,20 +26,11 @@ test('Azure Functions metadata declares HTTP functions', () => {
   }
 });
 
-test('MCP Azure Function handler responds to ChatGPT connection probes', async () => {
+test('MCP Azure Function handler rejects non-POST requests', async () => {
   const response = await mcpHandler({ method: 'GET' });
 
-  assert.equal(response.status, 200);
-  assert.equal(response.jsonBody.transport, 'streamable-http');
-  assert.ok(response.jsonBody.tools.some(tool => tool.name === 'search'));
-  assert.equal(response.headers['MCP-Protocol-Version'], response.jsonBody.protocolVersion);
-});
-
-test('MCP Azure Function handler supports CORS preflight', async () => {
-  const response = await mcpHandler({ method: 'OPTIONS' });
-
-  assert.equal(response.status, 204);
-  assert.match(response.headers['Access-Control-Allow-Methods'], /POST/);
+  assert.equal(response.status, 405);
+  assert.equal(response.headers.Allow, 'POST');
 });
 
 test('MCP Azure Function handler accepts v3 request body shape', async () => {
