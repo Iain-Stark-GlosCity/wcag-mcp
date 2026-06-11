@@ -6,7 +6,7 @@ import { handler as accessibilityAbout } from './accessibilityAbout.js';
 app.http('accessibility-mcp', {
   route: 'accessibility-mcp',
   authLevel: 'anonymous',
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['POST', 'OPTIONS'],
   handler: accessibilityMcp
 });
 
