@@ -5,7 +5,7 @@ import { handler as mcpHandler } from '../../src/functions/accessibilityMcp.js';
 import { handler as healthHandler } from '../../src/functions/accessibilityHealth.js';
 
 const expectedFunctions = [
-  ['accessibility-mcp/function.json', 'accessibility-mcp', ['get', 'post', 'options'], '../src/functions/accessibilityMcp.js'],
+  ['accessibility-mcp/function.json', 'accessibility-mcp', ['post'], '../src/functions/accessibilityMcp.js'],
   ['accessibility-health/function.json', 'accessibility-health', ['get', 'options'], '../src/functions/accessibilityHealth.js'],
   ['accessibility-about/function.json', 'accessibility-about', ['get', 'options'], '../src/functions/accessibilityAbout.js']
 ];
