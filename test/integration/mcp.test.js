@@ -34,7 +34,7 @@ test('MCP returns useful structured errors', async () => {
   assert.equal(res.error.data.error_code, 'CRITERION_NOT_FOUND');
 });
 
-test('get-techniques-for-advisory enriches criteria with filtered W3C technique links', async () => {
+test('get-techniques-for-advisory omits unverified bundled placeholder links', async () => {
   const criterion = criteria.find(item => item.techniques?.sufficient?.length > 0);
   assert.ok(criterion, 'test data should include at least one criterion with a sufficient technique');
 
@@ -52,6 +52,10 @@ test('get-techniques-for-advisory enriches criteria with filtered W3C technique 
 
   const [enrichedCriterion] = called.result.structuredContent.criteria;
   assert.equal(enrichedCriterion.id, criterion.id);
-  assert.ok(enrichedCriterion.techniques.sufficient.some(technique => technique.id === expectedTechnique.id));
-  assert.match(called.result.content[0].text, new RegExp(`https://www\\.w3\\.org/WAI/WCAG22/Techniques/${expectedTechnology}/${expectedTechnique.id}`));
+  const enrichedTechnique = enrichedCriterion.techniques.sufficient.find(technique => technique.id === expectedTechnique.id);
+  assert.ok(enrichedTechnique);
+  assert.equal(enrichedTechnique.verified, false);
+  assert.equal(enrichedTechnique.url, null);
+  assert.match(called.result.content[0].text, /No verified W3C technique URL is available/);
+  assert.doesNotMatch(called.result.content[0].text, new RegExp(`https://www\\.w3\\.org/WAI/WCAG22/Techniques/${expectedTechnology}/${expectedTechnique.id}`));
 });

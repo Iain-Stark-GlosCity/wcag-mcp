@@ -22,7 +22,27 @@ function techniqueUrl(technique) {
   return `https://www.w3.org/WAI/WCAG22/Techniques/${normalizeTechnology(technique.technology)}/${technique.id}`;
 }
 
-function extractTechniques(items, { technology } = {}, seen = new Set()) {
+function explicitTechniqueUrl(item) {
+  return item?.url || item?.uri || item?.href || item?.source || null;
+}
+
+function isGeneratedPlaceholderTechnique(item, criterion) {
+  if (!criterion || !item?.id) return false;
+  const criterionDigits = String(criterion.id || '').replace(/\D/g, '');
+  const idDigits = String(item.id || '').replace(/\D/g, '');
+  const placeholderTitle = /^(sufficient|advisory|failure) technique for /i.test(item.title || '');
+
+  return placeholderTitle && criterionDigits && idDigits === criterionDigits;
+}
+
+function techniqueLink(item, tech, criterion) {
+  const explicitUrl = explicitTechniqueUrl(item);
+  if (explicitUrl) return { url: explicitUrl, verified: true };
+  if (isGeneratedPlaceholderTechnique(item, criterion)) return { url: null, verified: false };
+  return { url: techniqueUrl(tech), verified: true };
+}
+
+function extractTechniques(items, { technology, criterion } = {}, seen = new Set()) {
   const out = [];
   if (!Array.isArray(items)) return out;
 
@@ -36,17 +56,17 @@ function extractTechniques(items, { technology } = {}, seen = new Set()) {
       const key = `${tech.id}:${tech.technology}`;
       if (!seen.has(key) && (!technology || tech.technology === technology)) {
         seen.add(key);
-        out.push({ ...tech, url: techniqueUrl(tech) });
+        out.push({ ...tech, ...techniqueLink(item, tech, criterion) });
       }
     }
 
-    out.push(...extractTechniques(item?.techniques, { technology }, seen));
-    out.push(...extractTechniques(item?.using, { technology }, seen));
-    out.push(...extractTechniques(item?.and, { technology }, seen));
+    out.push(...extractTechniques(item?.techniques, { technology, criterion }, seen));
+    out.push(...extractTechniques(item?.using, { technology, criterion }, seen));
+    out.push(...extractTechniques(item?.and, { technology, criterion }, seen));
 
     if (Array.isArray(item?.groups)) {
       for (const group of item.groups) {
-        out.push(...extractTechniques(group?.techniques, { technology }, seen));
+        out.push(...extractTechniques(group?.techniques, { technology, criterion }, seen));
       }
     }
   }
@@ -84,7 +104,7 @@ function textResponse(text, structuredContent = {}) {
 
 export const getTechniquesForAdvisory = {
   name: 'get-techniques-for-advisory',
-  description: 'Returns sufficient, advisory, and failure technique IDs with W3C links for one or more WCAG criteria, optionally filtered by technology. Use this after accessibility_advise_component to enrich implementation guidance with concrete technique references.',
+  description: 'Returns sufficient, advisory, and failure technique IDs for one or more WCAG criteria, optionally filtered by technology. Includes W3C links only when the technique reference is verified rather than bundled placeholder data. Use this after accessibility_advise_component to enrich implementation guidance with concrete technique references.',
   inputSchema: {
     type: 'object',
     properties: {
@@ -125,13 +145,16 @@ export const getTechniquesForAdvisory = {
       let section = `## ${criterion.id} ${criterion.title} (Level ${criterion.level})\n\n`;
 
       for (const type of typesToInclude) {
-        const techs = extractTechniques(techniques[type], { technology });
+        const techs = extractTechniques(techniques[type], { technology, criterion });
         criterionTechniques[type] = techs;
         if (techs.length === 0) continue;
 
         section += `### ${typeHeading(type)}\n\n`;
         for (const technique of techs) {
-          section += `- **${technique.id}** (${technique.technology}): ${technique.title}\n  ${technique.url}\n`;
+          const linkLine = technique.url
+            ? `\n  ${technique.url}`
+            : '\n  No verified W3C technique URL is available for this bundled placeholder reference.';
+          section += `- **${technique.id}** (${technique.technology}): ${technique.title}${linkLine}\n`;
         }
         section += '\n';
       }
