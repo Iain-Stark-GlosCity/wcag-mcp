@@ -21,6 +21,7 @@ test('MCP tools/list and call work', async () => {
   assert.ok(listed.result.tools.some(t => t.name === 'accessibility_validate_aria_attributes'));
   assert.ok(listed.result.tools.some(t => t.name === 'search'));
   assert.ok(listed.result.tools.some(t => t.name === 'fetch'));
+  assert.ok(listed.result.tools.some(t => t.name === 'get-techniques-for-advisory'));
   assert.ok(listed.result.tools.find(t => t.name === 'search').outputSchema);
   const called = await handleJsonRpcBody({ jsonrpc:'2.0', id:2, method:'tools/call', params:{ name:'wcag_get_criterion', arguments:{ ref_id:'1.4.8' } } });
   assert.equal(called.result.structuredContent.criterion.level, 'AAA');
@@ -30,4 +31,21 @@ test('MCP tools/list and call work', async () => {
 test('MCP returns useful structured errors', async () => {
   const res = await handleJsonRpcBody({ jsonrpc:'2.0', id:3, method:'tools/call', params:{ name:'wcag_get_criterion', arguments:{ ref_id:'9.9.9' } } });
   assert.equal(res.error.data.error_code, 'CRITERION_NOT_FOUND');
+});
+
+
+test('get-techniques-for-advisory enriches criteria with filtered W3C technique links', async () => {
+  const called = await handleJsonRpcBody({
+    jsonrpc: '2.0',
+    id: 4,
+    method: 'tools/call',
+    params: {
+      name: 'get-techniques-for-advisory',
+      arguments: { criteria: ['4.1.2'], technology: 'css', type: 'advisory' }
+    }
+  });
+
+  assert.equal(called.result.structuredContent.criteria[0].id, '4.1.2');
+  assert.equal(called.result.structuredContent.criteria[0].techniques.advisory[0].id, 'C412');
+  assert.match(called.result.content[0].text, /https:\/\/www\.w3\.org\/WAI\/WCAG22\/Techniques\/css\/C412/);
 });
