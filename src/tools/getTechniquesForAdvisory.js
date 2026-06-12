@@ -104,7 +104,7 @@ function textResponse(text, structuredContent = {}) {
 
 export const getTechniquesForAdvisory = {
   name: 'get-techniques-for-advisory',
-  description: 'Returns sufficient, advisory, and failure technique IDs for one or more WCAG criteria, optionally filtered by technology. Includes W3C links only when the technique reference is verified rather than bundled placeholder data. Use this after accessibility_advise_component to enrich implementation guidance with concrete technique references.',
+  description: 'Returns sufficient, advisory, and failure technique IDs for one or more WCAG criteria, optionally filtered by technology. Includes W3C links only when the technique reference is verified rather than bundled placeholder data. Use this after accessibility_advise_component to enrich implementation guidance with concrete technique references. Note: W3C maps each technique to the criterion that owns it, not to every criterion it helps satisfy — for example, ARIA techniques for a keyboard-operable disclosure (such as ARIA5) live under 4.1.2, not 2.1.1. When a fix spans criteria, query the related criteria together (for example ["2.1.1", "4.1.2"]) rather than filtering aggressively by technology.',
   inputSchema: {
     type: 'object',
     properties: {
@@ -115,7 +115,7 @@ export const getTechniquesForAdvisory = {
       },
       technology: {
         type: 'string',
-        description: 'Optional: filter by technology to get the most relevant techniques.',
+        description: 'Optional: filter by technology to get the most relevant techniques. A filter can return nothing when the relevant techniques are mapped under a companion criterion; prefer listing related criteria together over filtering.',
         enum: ['html', 'aria', 'css', 'pdf', 'general', 'client-side-script', 'failures']
       },
       type: {
