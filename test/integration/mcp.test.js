@@ -34,12 +34,50 @@ test('MCP returns useful structured errors', async () => {
   assert.equal(res.error.data.error_code, 'CRITERION_NOT_FOUND');
 });
 
-test('get-techniques-for-advisory omits unverified bundled placeholder links', async () => {
-  const criterion = criteria.find(item => item.techniques?.sufficient?.length > 0);
+function firstTechniqueEntry(items) {
+  if (!Array.isArray(items)) return null;
+  for (const item of items) {
+    if (item?.id) return item;
+    const nested = firstTechniqueEntry(item?.techniques) || firstTechniqueEntry(item?.using) || firstTechniqueEntry(item?.and);
+    if (nested) return nested;
+    for (const group of item?.groups || []) {
+      const grouped = firstTechniqueEntry(group?.techniques);
+      if (grouped) return grouped;
+    }
+  }
+  return null;
+}
+
+function technologyFromId(id = '') {
+  if (/^ARIA/i.test(id)) return 'aria';
+  if (/^C\d+/i.test(id)) return 'css';
+  if (/^F\d+/i.test(id)) return 'failures';
+  if (/^H\d+/i.test(id)) return 'html';
+  if (/^PDF/i.test(id)) return 'pdf';
+  if (/^SCR/i.test(id)) return 'client-side-script';
+  return 'general';
+}
+
+function isGeneratedPlaceholder(technique, criterion) {
+  return /^(sufficient|advisory|failure) technique for /i.test(technique.title || '')
+    && String(technique.id).replace(/\D/g, '') === String(criterion.id).replace(/\D/g, '');
+}
+
+test('get-techniques-for-advisory links techniques only when verified', async () => {
+  let criterion;
+  let expectedTechnique;
+  for (const item of criteria) {
+    const technique = firstTechniqueEntry(item.techniques?.sufficient);
+    if (technique) {
+      criterion = item;
+      expectedTechnique = technique;
+      break;
+    }
+  }
   assert.ok(criterion, 'test data should include at least one criterion with a sufficient technique');
 
-  const expectedTechnique = criterion.techniques.sufficient[0];
-  const expectedTechnology = expectedTechnique.technology.toLowerCase().replace(/\s+/g, '-');
+  const expectedTechnology = (expectedTechnique.technology || technologyFromId(expectedTechnique.id))
+    .toLowerCase().replace(/\s+/g, '-');
   const called = await handleJsonRpcBody({
     jsonrpc: '2.0',
     id: 4,
@@ -54,8 +92,17 @@ test('get-techniques-for-advisory omits unverified bundled placeholder links', a
   assert.equal(enrichedCriterion.id, criterion.id);
   const enrichedTechnique = enrichedCriterion.techniques.sufficient.find(technique => technique.id === expectedTechnique.id);
   assert.ok(enrichedTechnique);
-  assert.equal(enrichedTechnique.verified, false);
-  assert.equal(enrichedTechnique.url, null);
-  assert.match(called.result.content[0].text, /No verified W3C technique URL is available/);
-  assert.doesNotMatch(called.result.content[0].text, new RegExp(`https://www\\.w3\\.org/WAI/WCAG22/Techniques/${expectedTechnology}/${expectedTechnique.id}`));
+
+  const text = called.result.content[0].text;
+  const w3cLink = new RegExp(`https://www\\.w3\\.org/WAI/WCAG22/Techniques/${expectedTechnology}/${expectedTechnique.id}`);
+  if (isGeneratedPlaceholder(expectedTechnique, criterion)) {
+    assert.equal(enrichedTechnique.verified, false);
+    assert.equal(enrichedTechnique.url, null);
+    assert.match(text, /No verified W3C technique URL is available/);
+    assert.doesNotMatch(text, w3cLink);
+  } else {
+    assert.equal(enrichedTechnique.verified, true);
+    assert.ok(enrichedTechnique.url?.includes(expectedTechnique.id), 'verified technique should link to its technique page');
+    assert.ok(text.includes(enrichedTechnique.url), 'text section should include the technique link');
+  }
 });
