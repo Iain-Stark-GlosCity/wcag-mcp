@@ -18,7 +18,7 @@ export function withSourceMetadata(payload, trace = {}) {
     trace: {
       wcag_data_version: '2.2',
       data_build_date: '2026-06-11',
-      rule_version: '0.1.0',
+      rule_version: '0.2.0',
       ...trace
     }
   };

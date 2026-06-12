@@ -36,13 +36,25 @@ Reference tools:
 Advisor tools:
 
 - `accessibility_advise_text_layout`
-- `accessibility_advise_colour_contrast`
+- `accessibility_advise_colour_contrast` (accepts computed colours — hex, `rgb()`/`rgba()`, `hsl()`/`hsla()`, named colours, and `var(--token)` resolved through a `tokens` map; translucent colours are composited over the background and `page_background`)
 - `accessibility_advise_focus_visible`
 - `accessibility_advise_form_errors`
-- `accessibility_advise_component` (accepts component prose and/or an `html` fragment for ARIA pattern matching)
+- `accessibility_advise_component` (accepts component prose and/or an `html` fragment; detects tabs, accordions, menus, dialogs, disclosures, breadcrumbs, pagination, search, forms, cards, tables, alerts, status messages, and comboboxes)
 - `accessibility_check_css_rule`
 - `accessibility_validate_aria_attributes`
-- `accessibility_get_component_requirements`
+- `accessibility_get_component_requirements` (returns a concise build-agent contract by default)
+
+Validator issues are classified so hard failures are separable from smells:
+
+- `failure` — deterministic violation (e.g. an invalid ARIA attribute); the result decision is `fail`
+- `warning` — likely problem that may be legitimate (e.g. a possibly redundant accessible name); decision is `warn`
+- `note` — legitimate markup that still needs a manual check; decision stays `pass`
+
+All advisor and validator tools accept `output_mode: "build_agent"` to return a concise implementation contract instead of the full response:
+
+```json
+{ "must": [], "should": [], "tests": [], "wcag": [], "example_fix": "" }
+```
 
 ## Data pipeline
 
