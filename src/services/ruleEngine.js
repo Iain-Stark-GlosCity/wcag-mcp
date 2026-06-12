@@ -1,5 +1,7 @@
 import { withSourceMetadata } from './sourceBuilder.js';
-import { ratioFor } from './colour.js';
+import { contrastDetails } from './colour.js';
+import { FAILURE, WARNING, summariseIssues, decisionFor } from './issueClassification.js';
+import { applyOutputMode } from './buildContract.js';
 
 function declarations(css) {
   const out = [];
@@ -14,20 +16,56 @@ function declarations(css) {
   }
   return out;
 }
-export function checkCssRule({ css = '', target_level = 'AA', context = '' } = {}) {
+export function checkCssRule({ css = '', target_level = 'AA', context = '', output_mode } = {}) {
   const issues=[]; const decls=declarations(css);
   for (const d of decls) {
-    if (d.property === 'text-align' && d.value.includes('justify')) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'high', message:'Fully justified paragraph text conflicts with AAA visual presentation guidance.', criteria:['1.4.8'], suggested_fix:'Use text-align: left.' });
-    if (d.property === 'line-height' && parseFloat(d.value) && parseFloat(d.value) < 1.5) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'medium', message:'Line height is below the expected 1.5 build rule.', criteria:['1.4.8','1.4.12'], suggested_fix:'Use line-height: 1.5 or greater.' });
-    if (d.property === 'max-width' && d.value.endsWith('ch') && parseFloat(d.value) > 80) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'medium', message:'Body text measure is wider than the AAA visual presentation 80-character rule.', criteria:['1.4.8'], suggested_fix:'Use max-width: 80ch or less for body text.' });
-    if (d.property === 'outline' && d.value.includes('none')) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'high', message:'Removing outlines can fail visible focus unless an equivalent replacement is present.', criteria:['2.4.7','2.4.11'], suggested_fix:'Provide a visible :focus-visible outline or box-shadow.' });
+    if (d.property === 'text-align' && d.value.includes('justify')) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'high', classification:FAILURE, message:'Fully justified paragraph text conflicts with AAA visual presentation guidance.', criteria:['1.4.8'], suggested_fix:'Use text-align: left.' });
+    if (d.property === 'line-height' && parseFloat(d.value) && parseFloat(d.value) < 1.5) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'medium', classification:WARNING, message:'Line height is below the expected 1.5 build rule.', criteria:['1.4.8','1.4.12'], suggested_fix:'Use line-height: 1.5 or greater.' });
+    if (d.property === 'max-width' && d.value.endsWith('ch') && parseFloat(d.value) > 80) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'medium', classification:WARNING, message:'Body text measure is wider than the AAA visual presentation 80-character rule.', criteria:['1.4.8'], suggested_fix:'Use max-width: 80ch or less for body text.' });
+    if (d.property === 'outline' && d.value.includes('none')) issues.push({ selector:d.selector, property:d.property, value:d.value, severity:'high', classification:WARNING, message:'Removing outlines can fail visible focus unless an equivalent replacement is present.', criteria:['2.4.7','2.4.11'], suggested_fix:'Provide a visible :focus-visible outline or box-shadow.' });
   }
-  return withSourceMetadata({ decision: issues.length?'fail':'pass', status: issues.length?'fail':'pass', criteria:[...new Set(issues.flatMap(i=>i.criteria))], issues, corrected_css: issues.length ? 'p { line-height: 1.5; text-align: left; max-width: 80ch; }\n:focus-visible { outline: 3px solid #ffdd00; outline-offset: 2px; }' : css, context, target_level }, { tool:'accessibility_check_css_rule', criteria_used:[...new Set(issues.flatMap(i=>i.criteria))] });
+  const decision = decisionFor(issues);
+  const result = withSourceMetadata({ decision, status: decision, summary: summariseIssues(issues), criteria:[...new Set(issues.flatMap(i=>i.criteria))], issues, corrected_css: issues.length ? 'p { line-height: 1.5; text-align: left; max-width: 80ch; }\n:focus-visible { outline: 3px solid #ffdd00; outline-offset: 2px; }' : css, context, target_level }, { tool:'accessibility_check_css_rule', criteria_used:[...new Set(issues.flatMap(i=>i.criteria))] });
+  return applyOutputMode(result, output_mode);
 }
 
-export function adviseColourContrast({ foreground, background, text_size='normal', target_level='AA' } = {}) {
-  const ratio = ratioFor(foreground, background);
+export function adviseColourContrast({ foreground, background, text_size='normal', target_level='AA', tokens={}, page_background='#ffffff', output_mode } = {}) {
+  const criterionId = target_level==='AAA' ? '1.4.6' : '1.4.3';
+  const criterionTitle = target_level==='AAA' ? 'Contrast (Enhanced)' : 'Contrast (Minimum)';
+  let computed;
+  try {
+    computed = contrastDetails(foreground, background, { tokens, page_background });
+  } catch (err) {
+    return applyOutputMode(withSourceMetadata({
+      answer: `The supplied colours could not be resolved to computed values: ${err.message} Provide hex/rgb/hsl values or a token map entry for each CSS variable.`,
+      decision: 'human_review',
+      criteria: [{ id: criterionId, title: criterionTitle, level: target_level }],
+      implementation: {},
+      automated_checks: [],
+      human_review: ['Resolve the colour values (including CSS variables and design tokens) and re-run the contrast check.'],
+      limitations: [`Unresolved colour input: ${err.message}`],
+      confidence: 'low',
+      sources: [`https://www.w3.org/TR/WCAG22/#${target_level==='AAA'?'contrast-enhanced':'contrast-minimum'}`],
+      answer_markdown: `Could not compute contrast: ${err.message}`
+    }, { tool:'accessibility_advise_colour_contrast', criteria_used:[criterionId] }), output_mode);
+  }
+  const { ratio, foreground_resolved, background_resolved, composited } = computed;
   const required = target_level === 'AAA' ? (text_size === 'large' ? 4.5 : 7) : (text_size === 'large' ? 3 : 4.5);
   const pass = ratio >= required;
-  return withSourceMetadata({ answer: pass ? `Contrast ratio ${ratio.toFixed(2)}:1 meets ${target_level}.` : `Contrast ratio ${ratio.toFixed(2)}:1 is below the required ${required}:1 for ${target_level}.`, decision: pass?'pass':'fail', criteria:[{id: target_level==='AAA'?'1.4.6':'1.4.3', title: target_level==='AAA'?'Contrast (Enhanced)':'Contrast (Minimum)', level: target_level}], implementation:{ ratio: Number(ratio.toFixed(2)), required_ratio: required }, automated_checks:['Contrast ratio is calculated deterministically from the supplied colors.'], human_review:['Confirm text size/weight and whether the content is text, UI component, or graphical object.'], limitations:[], confidence:'high', sources:[`https://www.w3.org/TR/WCAG22/#${target_level==='AAA'?'contrast-enhanced':'contrast-minimum'}`], answer_markdown:`Contrast ratio: ${ratio.toFixed(2)}:1` }, { tool:'accessibility_advise_colour_contrast', criteria_used:[target_level==='AAA'?'1.4.6':'1.4.3'] });
+  const result = withSourceMetadata({
+    answer: pass ? `Contrast ratio ${ratio.toFixed(2)}:1 meets ${target_level}.` : `Contrast ratio ${ratio.toFixed(2)}:1 is below the required ${required}:1 for ${target_level}.`,
+    decision: pass?'pass':'fail',
+    criteria:[{id: criterionId, title: criterionTitle, level: target_level}],
+    implementation:{ ratio: Number(ratio.toFixed(2)), required_ratio: required, foreground_resolved, background_resolved, composited },
+    automated_checks:['Contrast ratio is calculated deterministically from the computed colors (hex, rgb[a], hsl[a], named colours, and token-resolved CSS variables; translucent colours are composited over the effective background).'],
+    human_review:[
+      'Confirm text size/weight and whether the content is text, UI component, or graphical object.',
+      ...(composited ? ['Translucent colours were composited over the supplied background; confirm the real stacking context matches.'] : [])
+    ],
+    limitations: composited ? ['Alpha compositing assumes the supplied background/page colour is directly behind the text.'] : [],
+    confidence:'high',
+    sources:[`https://www.w3.org/TR/WCAG22/#${target_level==='AAA'?'contrast-enhanced':'contrast-minimum'}`],
+    answer_markdown:`Contrast ratio: ${ratio.toFixed(2)}:1 (foreground ${foreground_resolved} on background ${background_resolved})`
+  }, { tool:'accessibility_advise_colour_contrast', criteria_used:[criterionId] });
+  return applyOutputMode(result, output_mode);
 }
