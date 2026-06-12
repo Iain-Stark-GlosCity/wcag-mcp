@@ -8,6 +8,12 @@ const STATE_ARIA = new Set(['aria-checked','aria-expanded','aria-pressed','aria-
 const KNOWN_ARIA = new Set([...GLOBAL_ARIA, ...STATE_ARIA, 'aria-activedescendant','aria-autocomplete','aria-colcount','aria-colindex','aria-colindextext','aria-colspan','aria-level','aria-modal','aria-multiline','aria-multiselectable','aria-orientation','aria-placeholder','aria-posinset','aria-readonly','aria-required','aria-rowcount','aria-rowindex','aria-rowindextext','aria-rowspan','aria-setsize','aria-sort','aria-valuemax','aria-valuemin','aria-valuenow','aria-valuetext']);
 const INTERACTIVE_SELECTOR = 'button, a[href], input, select, textarea, summary, [tabindex], [role="button"], [role="link"], [role="tab"], [role="combobox"], [role="menuitem"]';
 
+// Landmark and container elements/roles where aria-label labels the region or
+// widget itself (not replacing visible descendant text), so the "redundant
+// visible text" heuristic does not apply.
+const CONTAINER_TAGS = new Set(['nav', 'main', 'aside', 'header', 'footer', 'section', 'form', 'search', 'ul', 'ol', 'table']);
+const CONTAINER_ROLES = new Set(['navigation', 'complementary', 'banner', 'contentinfo', 'region', 'search', 'tablist', 'toolbar', 'tree', 'treegrid', 'grid', 'listbox', 'menu', 'menubar', 'radiogroup', 'group', 'dialog', 'alertdialog', 'feed']);
+
 function parseFragment(html) {
   const dom = new JSDOM(`<main id="__root">${html || ''}</main>`);
   return dom.window.document.querySelector('#__root');
@@ -77,7 +83,12 @@ export function validateAriaAttributes({ html = '', target_level = 'AA', context
     }
 
     if (el.hasAttribute('aria-label') && visibleText(el)) {
-      addIssue(issues, { classification: WARNING, selector: selectorFor(el), attribute: 'aria-label', message: 'aria-label overrides or duplicates visible text on this element.', suggested_fix: 'Prefer visible text as the accessible name, or use aria-labelledby if the visible label is elsewhere.' });
+      const tag = el.tagName.toLowerCase();
+      const role = el.getAttribute('role') || '';
+      const isContainer = CONTAINER_TAGS.has(tag) || CONTAINER_ROLES.has(role);
+      if (!isContainer) {
+        addIssue(issues, { classification: WARNING, selector: selectorFor(el), attribute: 'aria-label', message: 'aria-label overrides or duplicates visible text on this element.', suggested_fix: 'Prefer visible text as the accessible name, or use aria-labelledby if the visible label is elsewhere.' });
+      }
     }
 
     if (el.tagName.toLowerCase() === 'img' && el.hasAttribute('alt') && el.hasAttribute('aria-label')) {
