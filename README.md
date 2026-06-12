@@ -43,6 +43,7 @@ Advisor tools:
 - `accessibility_check_css_rule`
 - `accessibility_validate_aria_attributes`
 - `accessibility_get_component_requirements` (returns a concise build-agent contract by default)
+- `accessibility_audit_summary` (audits a drafted summary against a finding's governance block and reports drift: upgraded, downgraded, or broadened claims, and omitted classifications)
 
 Validator issues are classified so hard failures are separable from smells:
 
@@ -92,7 +93,7 @@ Every MCP response carries a machine-readable `governance` block. Its purpose is
 {
   "governance": {
     "finding_classification": "failure | warning | note | pass | caution | human_review | not_applicable | not_tested",
-    "scope": "static_snippet | css_static | contrast_calculation | component_guidance | wcag_reference",
+    "scope": "static_snippet | css_static | contrast_calculation | component_guidance | wcag_reference | response_audit",
     "confidence": "high | medium | low",
     "claim_boundary": {
       "can_claim": "The static HTML snippet check found 1 failure related to 4.1.2 in the supplied fragment.",
@@ -128,7 +129,9 @@ Decision taxonomy and release-gate mapping:
 | `pass` | The specific check passed — only that check, only that scope | `allow` |
 | `not_applicable` | Reference data, not a test finding | `not_applicable` |
 
-A `pass` never means "the page is accessible". A `fail` never means "the whole page fails WCAG" — the `scope` field states exactly what was tested, and `claim_boundary` states exactly what may and may not be said about it. The governance block survives `output_mode: "build_agent"` unchanged.
+A `pass` never means "the page is accessible". A `fail` never means "the whole page fails WCAG" — the `scope` field states exactly what was tested, and `claim_boundary` states exactly what may and may not be said about it. Pass results carry additional explicit prohibitions (compliance, page-level, and rendered-behaviour claims), and a `block` gate always carries at least one `blocking_finding`. The governance block survives `output_mode: "build_agent"` unchanged.
+
+To close the loop, `accessibility_audit_summary` takes a drafted summary plus the governance block it summarises and deterministically reports drift — a warning reported as a failure, a failure reported as clean, a snippet finding broadened to page-level compliance, or an omitted classification. A tool's own `can_claim` sentence always passes the audit.
 
 ## Attribution
 

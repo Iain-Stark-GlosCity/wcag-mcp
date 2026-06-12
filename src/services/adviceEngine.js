@@ -93,11 +93,11 @@ export function adviseFormErrors({ target_level = 'AA', context = '', output_mod
     ['Review whether suggestions are accurate, plain English, and do not compromise security.']), output_mode);
 }
 
-export function adviseComponent({ component = '', target_level = 'AA', context = '', html = '', output_mode } = {}) {
+export function adviseComponent({ component = '', target_level = 'AA', context = '', html = '', output_mode, tool = 'accessibility_advise_component' } = {}) {
   const patternMatch = matchAriaPattern({ component, context, html });
   if (patternMatch && patternMatch.score >= 0.5) {
     const { pattern, score, evidence } = patternMatch;
-    return applyOutputMode(buildAdvice('accessibility_advise_component',
+    return applyOutputMode(buildAdvice(tool,
       `${pattern.name} matches the ${pattern.apg}. First apply the identified WCAG criteria, then use the implementation guidance for this pattern.`,
       pattern.criteria,
       { ...pattern.implementation, target_level, context, html_snippet_received: Boolean(html) },
@@ -122,5 +122,5 @@ export function adviseComponent({ component = '', target_level = 'AA', context =
   const hint = hasSpecificCandidates
     ? ''
     : 'If you are describing a UI component, call accessibility_get_component_requirements with the component name for a targeted implementation contract.';
-  return applyOutputMode(noMapping('accessibility_advise_component', candidates, hint), output_mode);
+  return applyOutputMode(noMapping(tool, candidates, hint), output_mode);
 }

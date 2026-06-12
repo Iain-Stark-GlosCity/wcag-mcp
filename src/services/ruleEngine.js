@@ -47,8 +47,23 @@ export function checkCssRule({ css = '', target_level = 'AA', context = '', outp
     }
   }
   const decision = decisionFor(issues);
-  const result = withSourceMetadata({ decision, status: decision, summary: summariseIssues(issues), criteria:[...new Set(issues.flatMap(i=>i.criteria))], issues, corrected_css: issues.length ? 'p { line-height: 1.5; text-align: left; max-width: 80ch; }\n:focus-visible { outline: 3px solid #ffdd00; outline-offset: 2px; }' : css, context, target_level }, { tool:'accessibility_check_css_rule', criteria_used:[...new Set(issues.flatMap(i=>i.criteria))], scope: 'css_static' });
+  const result = withSourceMetadata({ decision, status: decision, summary: summariseIssues(issues), criteria:[...new Set(issues.flatMap(i=>i.criteria))], issues, corrected_css: correctedCssFor(issues, css), context, target_level }, { tool:'accessibility_check_css_rule', criteria_used:[...new Set(issues.flatMap(i=>i.criteria))], scope: 'css_static' });
   return applyOutputMode(result, output_mode);
+}
+
+// The suggested patch must cover every finding that has a safe automated fix,
+// not just the text-layout subset.
+function correctedCssFor(issues, css) {
+  if (!issues.length) return css;
+  const blocks = [];
+  const flagged = id => issues.some(i => i.criteria.includes(id));
+  if (flagged('1.4.8') || flagged('1.4.12')) blocks.push('p { line-height: 1.5; text-align: left; max-width: 80ch; }');
+  if (flagged('2.4.7')) blocks.push(':focus-visible { outline: 3px solid #ffdd00; outline-offset: 2px; }');
+  const targetSelectors = [...new Set(issues.filter(i => i.criteria.includes('2.5.8')).map(i => i.selector))];
+  for (const selector of targetSelectors) blocks.push(`${selector} { min-width: 24px; min-height: 24px; }`);
+  const motionSelectors = [...new Set(issues.filter(i => i.criteria.includes('2.3.3')).map(i => i.selector))];
+  if (motionSelectors.length) blocks.push(`@media (prefers-reduced-motion: reduce) {\n  ${motionSelectors.join(', ')} { animation: none; transition: none; }\n}`);
+  return blocks.join('\n');
 }
 
 export function adviseColourContrast({ foreground, background, text_size='normal', target_level='AA', tokens={}, page_background='#ffffff', output_mode } = {}) {

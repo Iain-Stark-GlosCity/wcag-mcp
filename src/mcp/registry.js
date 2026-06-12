@@ -6,5 +6,6 @@ import { wcag_get_glossary_term } from '../tools/wcagGetGlossaryTerm.js';
 import { getTechniquesForAdvisory } from '../tools/getTechniquesForAdvisory.js';
 import { search, fetch } from '../tools/searchFetch.js';
 import { accessibility_advise_text_layout, accessibility_advise_colour_contrast, accessibility_advise_focus_visible, accessibility_advise_form_errors, accessibility_advise_component, accessibility_check_css_rule, accessibility_validate_aria_attributes, accessibility_get_component_requirements } from '../tools/advisorTools.js';
-export const tools=[search,fetch,wcag_get_criterion,wcag_search,wcag_get_techniques,wcag_get_failures,wcag_get_glossary_term,accessibility_advise_text_layout,accessibility_advise_colour_contrast,accessibility_advise_focus_visible,accessibility_advise_form_errors,accessibility_advise_component,accessibility_check_css_rule,accessibility_validate_aria_attributes,accessibility_get_component_requirements,getTechniquesForAdvisory];
+import { accessibility_audit_summary } from '../tools/auditResponse.js';
+export const tools=[search,fetch,wcag_get_criterion,wcag_search,wcag_get_techniques,wcag_get_failures,wcag_get_glossary_term,accessibility_advise_text_layout,accessibility_advise_colour_contrast,accessibility_advise_focus_visible,accessibility_advise_form_errors,accessibility_advise_component,accessibility_check_css_rule,accessibility_validate_aria_attributes,accessibility_get_component_requirements,accessibility_audit_summary,getTechniquesForAdvisory];
 export function findTool(name){ return tools.find(t=>t.name===name); }
