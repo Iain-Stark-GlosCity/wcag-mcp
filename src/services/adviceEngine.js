@@ -11,7 +11,7 @@ function criterionSummary(mapping) {
   return { id: criterion.id, title: criterion.title, level: criterion.level, relevance: mapping.relationship || 'related', reason: mapping.reason, confidence_score: mapping.confidence_score, pattern: mapping.pattern, sources: criterion.sources };
 }
 
-function noMapping(tool, candidates = []) {
+function noMapping(tool, candidates = [], hint = '') {
   const criteria = candidates.flatMap(candidate => candidate.pattern.criteria.map(mapping => ({ ...mapping, confidence_score: candidate.score, pattern: candidate.pattern.name }))).map(criterionSummary).filter(Boolean);
   const sources = criteria.flatMap(c => Object.values(c.sources));
   const candidateCriteria = criteria.map(c => ({ ...c, confidence: 'low' }));
@@ -20,8 +20,12 @@ function noMapping(tool, candidates = []) {
     note: 'Full implementation guidance is suppressed until the pattern is confirmed. The candidate ARIA pattern references below are safe starting points.',
     candidate_patterns: candidates.map(c => ({ name: c.pattern.name, apg: c.pattern.apg, reference: c.pattern.source }))
   } : {};
+  const baseAnswer = candidateCriteria.length
+    ? 'No direct WCAG success criterion was confidently identified. Candidate criteria are provided for human review; full implementation advice is suppressed until the pattern is confirmed.'
+    : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.';
+  const answer = hint ? `${baseAnswer} ${hint}` : baseAnswer;
   return withSourceMetadata({
-    answer: candidateCriteria.length ? 'No direct WCAG success criterion was confidently identified. Candidate criteria are provided for human review; full implementation advice is suppressed until the pattern is confirmed.' : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.',
+    answer,
     decision: 'human_review',
     criterion_identification: { status: 'low_confidence', criteria: candidateCriteria, candidate_patterns: candidates.map(c => ({ id: c.pattern.id, name: c.pattern.name, confidence_score: c.score, evidence: c.evidence })) },
     criteria: candidateCriteria,
@@ -31,7 +35,7 @@ function noMapping(tool, candidates = []) {
     limitations: ['Low-confidence criterion identification suppresses full implementation advice.'],
     confidence: 'low',
     sources,
-    answer_markdown: candidateCriteria.length ? `### Candidate criteria for human review\n${candidateCriteria.map(c => `- ${c.id} ${c.title} (low confidence)`).join('\n')}` : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.'
+    answer_markdown: candidateCriteria.length ? `### Candidate criteria for human review\n${candidateCriteria.map(c => `- ${c.id} ${c.title} (low confidence)`).join('\n')}` : answer
   }, { tool, criteria_used: candidateCriteria.map(c => c.id) });
 }
 
@@ -104,7 +108,19 @@ export function adviseComponent({ component = '', target_level = 'AA', context =
   }
 
   const lower = `${component} ${context} ${html}`.toLowerCase();
-  if (lower.includes('error')) return adviseFormErrors({ target_level, context: `${context} ${component}`, output_mode });
-  if (lower.includes('body') || lower.includes('content')) return adviseTextLayout({ target_level, context: `${context} ${component}`, output_mode });
-  return applyOutputMode(noMapping('accessibility_advise_component', candidatePatterns({ component, context, html })), output_mode);
+  // Narrow fallback: only route to form-error advice when the input specifically
+  // describes form validation, not generic "error" (e.g. "error banner" already
+  // matches the alert pattern above).
+  if (/(form|input|field|validation).{0,30}error|error.{0,30}(form|input|field|validation)/.test(lower)) {
+    return adviseFormErrors({ target_level, context: `${context} ${component}`, output_mode });
+  }
+  const candidates = candidatePatterns({ component, context, html });
+  // Show the hint when there are no candidates at all, or when every candidate is
+  // a broad low-confidence guess (score < 0.4) — those don't identify a specific
+  // pattern the caller can act on.
+  const hasSpecificCandidates = candidates.some(c => c.score >= 0.4);
+  const hint = hasSpecificCandidates
+    ? ''
+    : 'If you are describing a UI component, call accessibility_get_component_requirements with the component name for a targeted implementation contract.';
+  return applyOutputMode(noMapping('accessibility_advise_component', candidates, hint), output_mode);
 }

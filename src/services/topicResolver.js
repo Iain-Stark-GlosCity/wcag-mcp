@@ -24,6 +24,13 @@ export const topicIndex = [
     { id: '2.1.1', relationship: 'direct', reason: 'Functionality must be keyboard operable.' },
     { id: '2.1.2', relationship: 'direct', reason: 'Keyboard focus must not be trapped.' },
     { id: '2.1.4', relationship: 'related', reason: 'Character key shortcuts must be controllable.' }
+  ]},
+  { topic: 'target size', aliases: ['touch target','click target','tap target','pointer target','minimum size','control size'], criteria: [
+    { id: '2.5.8', relationship: 'direct', reason: 'Interactive targets must meet a 24 × 24 CSS pixel minimum at AA.' },
+    { id: '2.5.5', relationship: 'enhanced', reason: 'Enhanced target size requires 44 × 44 CSS pixels at AAA.' }
+  ]},
+  { topic: 'reduced motion', aliases: ['prefers-reduced-motion','animations','motion','transitions','animation from interactions'], criteria: [
+    { id: '2.3.3', relationship: 'direct', reason: 'Motion animation triggered by interaction can be disabled at AAA.' }
   ]}
 ];
 
