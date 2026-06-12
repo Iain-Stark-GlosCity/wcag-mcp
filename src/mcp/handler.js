@@ -1,6 +1,11 @@
 import { tools, findTool } from './registry.js';
 import { jsonRpcError } from './errors.js';
 import { protocolVersion, serverInfo, supportedProtocolVersions } from './protocol.js';
+import { buildGovernance } from '../services/governance.js';
+
+// These tools return raw structured data without going through withSourceMetadata,
+// so governance is added here after toolResult() wraps them.
+const REFERENCE_ONLY_TOOLS = new Set(['search', 'fetch', 'get-techniques-for-advisory']);
 
 const instructions = 'Use search to find relevant WCAG criteria, then fetch to retrieve full citation-ready guidance. All tools are read-only accessibility guidance helpers.';
 
@@ -49,6 +54,9 @@ export async function handleJsonRpcRequest(request) {
       const tool=findTool(params.name);
       if(!tool){ const e=new Error(`Unknown tool: ${params.name}`); e.code='TOOL_NOT_FOUND'; throw e;}
       result = toolResult(await tool.handler(params.arguments || {}));
+      if (REFERENCE_ONLY_TOOLS.has(params.name) && result.structuredContent) {
+        result.structuredContent.governance = buildGovernance({ decision: 'not_applicable', confidence: 'high' }, 'wcag_reference');
+      }
     }
     else { const e=new Error(`Unknown method: ${method}`); e.code=-32601; throw e; }
 

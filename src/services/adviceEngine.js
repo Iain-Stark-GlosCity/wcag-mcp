@@ -36,7 +36,7 @@ function noMapping(tool, candidates = [], hint = '') {
     confidence: 'low',
     sources,
     answer_markdown: candidateCriteria.length ? `### Candidate criteria for human review\n${candidateCriteria.map(c => `- ${c.id} ${c.title} (low confidence)`).join('\n')}` : answer
-  }, { tool, criteria_used: candidateCriteria.map(c => c.id) });
+  }, { tool, criteria_used: candidateCriteria.map(c => c.id), scope: 'component_guidance' });
 }
 
 function buildAdvice(tool, answer, criteriaMappings, implementation, automated_checks, human_review, limitations = [], extras = {}) {
@@ -58,7 +58,7 @@ function buildAdvice(tool, answer, criteriaMappings, implementation, automated_c
     sources,
     pattern: extras.pattern,
     answer_markdown: `### Applicable criteria\n${criteria.map(c => `- ${c.id} ${c.title} (Level ${c.level})`).join('\n')}\n\n### Implementation guidance\n${confidence === 'low' ? 'Suppressed pending human review.' : answer}`
-  }, { tool, criteria_used: criteria.map(c => c.id), pattern: extras.pattern?.id });
+  }, { tool, criteria_used: criteria.map(c => c.id), pattern: extras.pattern?.id, scope: 'component_guidance' });
 }
 
 export function adviseTextLayout({ question = '', target_level = 'AA', context = '', output_mode } = {}) {
