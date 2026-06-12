@@ -79,7 +79,8 @@ export function toBuildContract(result) {
     confidence: result.confidence || 'high',
     sources: dedupe(result.sources || []),
     licence_note: LICENCE_NOTE,
-    trace: result.trace
+    trace: result.trace,
+    governance: result.governance
   };
 }
 

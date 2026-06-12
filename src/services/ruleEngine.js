@@ -47,7 +47,7 @@ export function checkCssRule({ css = '', target_level = 'AA', context = '', outp
     }
   }
   const decision = decisionFor(issues);
-  const result = withSourceMetadata({ decision, status: decision, summary: summariseIssues(issues), criteria:[...new Set(issues.flatMap(i=>i.criteria))], issues, corrected_css: issues.length ? 'p { line-height: 1.5; text-align: left; max-width: 80ch; }\n:focus-visible { outline: 3px solid #ffdd00; outline-offset: 2px; }' : css, context, target_level }, { tool:'accessibility_check_css_rule', criteria_used:[...new Set(issues.flatMap(i=>i.criteria))] });
+  const result = withSourceMetadata({ decision, status: decision, summary: summariseIssues(issues), criteria:[...new Set(issues.flatMap(i=>i.criteria))], issues, corrected_css: issues.length ? 'p { line-height: 1.5; text-align: left; max-width: 80ch; }\n:focus-visible { outline: 3px solid #ffdd00; outline-offset: 2px; }' : css, context, target_level }, { tool:'accessibility_check_css_rule', criteria_used:[...new Set(issues.flatMap(i=>i.criteria))], scope: 'css_static' });
   return applyOutputMode(result, output_mode);
 }
 
@@ -69,7 +69,7 @@ export function adviseColourContrast({ foreground, background, text_size='normal
       confidence: 'low',
       sources: [`https://www.w3.org/TR/WCAG22/#${target_level==='AAA'?'contrast-enhanced':'contrast-minimum'}`],
       answer_markdown: `Could not compute contrast: ${err.message}`
-    }, { tool:'accessibility_advise_colour_contrast', criteria_used:[criterionId] }), output_mode);
+    }, { tool:'accessibility_advise_colour_contrast', criteria_used:[criterionId], scope: 'contrast_calculation' }), output_mode);
   }
   const { ratio, foreground_resolved, background_resolved, composited } = computed;
   const required = target_level === 'AAA' ? (text_size === 'large' ? 4.5 : 7) : (text_size === 'large' ? 3 : 4.5);
@@ -88,6 +88,6 @@ export function adviseColourContrast({ foreground, background, text_size='normal
     confidence:'high',
     sources:[`https://www.w3.org/TR/WCAG22/#${target_level==='AAA'?'contrast-enhanced':'contrast-minimum'}`],
     answer_markdown:`Contrast ratio: ${ratio.toFixed(2)}:1 (foreground ${foreground_resolved} on background ${background_resolved})`
-  }, { tool:'accessibility_advise_colour_contrast', criteria_used:[criterionId] });
+  }, { tool:'accessibility_advise_colour_contrast', criteria_used:[criterionId], scope: 'contrast_calculation' });
   return applyOutputMode(result, output_mode);
 }

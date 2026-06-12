@@ -123,6 +123,6 @@ export function validateAriaAttributes({ html = '', target_level = 'AA', context
     limitations: ['This is a deterministic snippet validator, not a full browser accessibility-tree audit.', 'Event listeners attached only from external JavaScript may not be visible in the HTML snippet.', 'Issues are classified as failure (must fix), warning (likely problem), or note (legitimate but needs a manual check).'],
     context,
     target_level
-  }, { tool: 'accessibility_validate_aria_attributes', criteria_used: criteria });
+  }, { tool: 'accessibility_validate_aria_attributes', criteria_used: criteria, scope: 'static_snippet' });
   return applyOutputMode(result, output_mode);
 }

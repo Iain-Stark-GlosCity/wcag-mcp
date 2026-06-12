@@ -1,3 +1,5 @@
+import { buildGovernance } from './governance.js';
+
 export const SOURCE_BASIS = 'W3C WCAG 2.2 and Understanding WCAG 2.2';
 export const LICENCE_NOTE = 'WCAG material copied from or derived from W3C material. See ATTRIBUTION.md.';
 
@@ -11,15 +13,18 @@ export function criterionSources(criterion) {
 }
 
 export function withSourceMetadata(payload, trace = {}) {
-  return {
+  const { scope, ...traceFields } = trace;
+  const result = {
     ...payload,
     source_basis: SOURCE_BASIS,
     licence_note: LICENCE_NOTE,
     trace: {
       wcag_data_version: '2.2',
       data_build_date: '2026-06-11',
-      rule_version: '0.2.0',
-      ...trace
+      rule_version: '0.3.0',
+      ...traceFields
     }
   };
+  if (scope) result.governance = buildGovernance(result, scope);
+  return result;
 }
