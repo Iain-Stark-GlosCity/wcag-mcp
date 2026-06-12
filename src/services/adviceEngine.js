@@ -14,15 +14,20 @@ function noMapping(tool, candidates = []) {
   const criteria = candidates.flatMap(candidate => candidate.pattern.criteria.map(mapping => ({ ...mapping, confidence_score: candidate.score, pattern: candidate.pattern.name }))).map(criterionSummary).filter(Boolean);
   const sources = criteria.flatMap(c => Object.values(c.sources));
   const candidateCriteria = criteria.map(c => ({ ...c, confidence: 'low' }));
+  const reducedImplementation = candidates.length ? {
+    status: 'reduced',
+    note: 'Full implementation guidance is suppressed until the pattern is confirmed. The candidate ARIA pattern references below are safe starting points.',
+    candidate_patterns: candidates.map(c => ({ name: c.pattern.name, apg: c.pattern.apg, reference: c.pattern.source }))
+  } : {};
   return withSourceMetadata({
-    answer: candidateCriteria.length ? 'No direct WCAG success criterion was confidently identified. Candidate criteria are provided for human review; implementation advice is suppressed until the pattern is confirmed.' : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.',
+    answer: candidateCriteria.length ? 'No direct WCAG success criterion was confidently identified. Candidate criteria are provided for human review; full implementation advice is suppressed until the pattern is confirmed.' : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.',
     decision: 'human_review',
     criterion_identification: { status: 'low_confidence', criteria: candidateCriteria, candidate_patterns: candidates.map(c => ({ id: c.pattern.id, name: c.pattern.name, confidence_score: c.score, evidence: c.evidence })) },
     criteria: candidateCriteria,
-    implementation: {},
+    implementation: reducedImplementation,
     automated_checks: [],
     human_review: ['Ask a qualified accessibility reviewer to confirm the pattern and criterion mapping before treating advice as WCAG-backed.'],
-    limitations: ['Low-confidence criterion identification suppresses implementation advice.'],
+    limitations: ['Low-confidence criterion identification suppresses full implementation advice.'],
     confidence: 'low',
     sources,
     answer_markdown: candidateCriteria.length ? `### Candidate criteria for human review\n${candidateCriteria.map(c => `- ${c.id} ${c.title} (low confidence)`).join('\n')}` : 'No direct WCAG success criterion was confidently identified. Human accessibility review required.'

@@ -47,12 +47,29 @@ test('Component advice accepts HTML snippets for pattern matching', () => {
   assert.ok(result.implementation.html_snippet_received);
 });
 
-test('Low-confidence component results include candidates and suppress implementation', () => {
+test('Low-confidence component results include candidates and reduce implementation to pattern references', () => {
   const result = adviseComponent({ component: 'interactive widget' });
   assert.equal(result.decision, 'human_review');
   assert.equal(result.confidence, 'low');
   assert.ok(result.criteria.some(c => c.id === '2.1.1'));
-  assert.deepEqual(result.implementation, {});
+  assert.equal(result.implementation.status, 'reduced');
+  assert.ok(result.implementation.candidate_patterns.every(p => p.name && p.reference));
+  assert.ok(!result.implementation.keyboard, 'full guidance stays suppressed at low confidence');
+});
+
+test('Broken disclosure navigation HTML still identifies the flyout pattern with high confidence', () => {
+  const result = adviseComponent({
+    component: 'disclosure navigation',
+    html: '<li class="has-children"><a href="/early-careers">Early Careers</a><ul class="sub-nav"><li><a href="/early-careers/apprenticeships">Apprenticeships</a></li></ul></li>',
+    target_level: 'AA'
+  });
+  assert.equal(result.pattern.id, 'navigation-flyout');
+  assert.notEqual(result.decision, 'human_review');
+  assert.notEqual(result.confidence, 'low');
+  assert.ok(result.criteria.find(c => c.id === '2.1.1')?.relevance === 'direct');
+  assert.ok(result.criteria.find(c => c.id === '4.1.2')?.relevance === 'direct');
+  assert.ok(result.implementation.pattern, 'implementation guidance must be populated');
+  assert.ok(result.implementation.keyboard.length > 0);
 });
 
 test('ARIA validator flags redundant names and missing state hooks', () => {

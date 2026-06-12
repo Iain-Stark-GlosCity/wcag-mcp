@@ -96,6 +96,11 @@ export function htmlSignals(html = '') {
   const signals = [];
   if (!text.trim()) return signals;
   if (/<nav\b/.test(text) && /(aria-expanded|submenu|dropdown|flyout)/.test(text)) signals.push('navigation-flyout');
+  // Inaccessible markup is still diagnostic: a nested link list inside a list
+  // item, or flyout-style class names, identify a navigation disclosure that
+  // has not been augmented with ARIA yet.
+  if (/<li\b[^>]*>[\s\S]*?<ul\b/.test(text) && /<a\b/.test(text)) signals.push('navigation-flyout');
+  if (/class=["'][^"']*(sub-?nav|submenu|drop-?down|flyout|mega-?menu|has-children)[^"']*["']/.test(text) && /<(ul|li|a|button)\b/.test(text)) signals.push('navigation-flyout');
   if (/(aria-expanded|aria-controls)/.test(text) && /<button\b/.test(text)) signals.push('disclosure-button');
   if (/role=["']tablist["']|role=["']tab["']|role=["']tabpanel["']/.test(text)) signals.push('tabs');
   if (/role=["']combobox["']|<input[^>]+list=|autocomplete/.test(text)) signals.push('combobox');
