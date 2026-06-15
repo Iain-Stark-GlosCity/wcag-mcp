@@ -9,13 +9,13 @@ on:
 jobs:
   check-updates:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WCAG_UPDATE_TOKEN }}
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -67,6 +67,7 @@ jobs:
         if: steps.check.outputs.updates == 'true' && steps.git-check.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.WCAG_UPDATE_TOKEN }}
           commit-message: 'chore: update WCAG data from W3C repository'
           title: '🔄 Update WCAG Data'
           body: |
