@@ -12,16 +12,13 @@ on:
 jobs:
   manual-update:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WCAG_UPDATE_TOKEN }}
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -58,6 +55,7 @@ jobs:
         if: steps.git-check.outputs.changes == 'true' || inputs.force
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.WCAG_UPDATE_TOKEN }}
           commit-message: 'chore: manual update of WCAG data'
           title: '🔄 Manual WCAG Data Update'
           body: |
